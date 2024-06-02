@@ -26,20 +26,24 @@ function NavBar_en({ currentPage }) {
     <nav className={`main-nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-content">
         <div className={`logo ${scrolled ? 'scrolled-logo' : ''}`}>
+          {/* Change anchor tag to button if it doesn't navigate anywhere */}
           <a href="/en/">
             <img src={require('../../../Assets/Logo/LOGO.png')} alt="Main Logo" />
           </a>
         </div>
         <ul className={`nav-menu ${menuOpen ? 'show' : ''}`}>
+          {/* Update anchor tags or replace them with buttons */}
           <li className={`${currentPage === 'home' ? 'active' : ''}`}>
             <a href="/en/">Home</a>
           </li>
           <li className={`${currentPage === 'about-us' ? 'active' : ''}`}>
             <a href="/en/about-us">About Us</a>
           </li>
+          {/* Replace anchor tag with button if it doesn't navigate anywhere */}
           <li className={`${currentPage === 'services' ? 'active' : ''}`}>
             <a href="/en/services">Services</a>
           </li>
+          {/* Update anchor tag with valid URL or replace it with a button */}
           <li className={`${currentPage === 'store' ? 'active' : ''}`}>
             <a href="http://www.nextech-sa.com"  rel="noreferrer" target="_blank">Store</a>
           </li>
@@ -49,6 +53,7 @@ function NavBar_en({ currentPage }) {
           <li className={`${currentPage === 'blog' ? 'active' : ''}`}>
             <a href="/en/blog">Blog</a>
           </li>
+          {/* Replace anchor tag with button if it doesn't navigate anywhere */}
           <li className={`cbl ${currentPage === 'contact-us' ? 'active' : ''}`}>
             <a href="/en/contact-us">
               <button className="Contact-btn">Request a Quote</button>
@@ -56,21 +61,17 @@ function NavBar_en({ currentPage }) {
           </li>
         </ul>
         <div className="Cont">
+          {/* Replace anchor tag with button if it doesn't navigate anywhere */}
           <a href="/en/contact-us">
             <button className="Contact-btn">Request a Quote</button>
           </a>
         </div>
         <div className="lang" id='lang'>
-        
           <a href="#" rel="noreferrer" className="en">
             English
           </a>
-        
           <div className="lang-dropdown">
-          <a href="/" > 
-            
-              العربية
-          </a> 
+            <a href="/">العربية</a>
           </div>
         </div>
         <div className={`burger-menu ${menuOpen ? 'toggle' : ''} ${scrolled ? 'scrolled' : ''}`} id='burger-menu' onClick={toggleMenu}>

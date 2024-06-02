@@ -33,23 +33,29 @@ function About_us_en() {
     ];
 
     sections.forEach((section, index) => {
-      if (section.left.current) {
-        section.left.current.classList.add('hidden');
-        section.left.current.dataset.animation = index % 2 === 0 ? 'fade-in-right' : 'fade-in-left';
-        observer.observe(section.left.current);
+      const leftRef = section.left.current;
+      const rightRef = section.right.current;
+
+      if (leftRef) {
+        leftRef.classList.add('hidden');
+        leftRef.dataset.animation = index % 2 === 0 ? 'fade-in-right' : 'fade-in-left';
+        observer.observe(leftRef);
       }
 
-      if (section.right.current) {
-        section.right.current.classList.add('hidden');
-        section.right.current.dataset.animation = index % 2 === 0 ? 'fade-in-left' : 'fade-in-right';
-        observer.observe(section.right.current);
+      if (rightRef) {
+        rightRef.classList.add('hidden');
+        rightRef.dataset.animation = index % 2 === 0 ? 'fade-in-left' : 'fade-in-right';
+        observer.observe(rightRef);
       }
     });
 
     return () => {
       sections.forEach((section) => {
-        if (section.left.current) observer.unobserve(section.left.current);
-        if (section.right.current) observer.unobserve(section.right.current);
+        const leftRef = section.left.current;
+        const rightRef = section.right.current;
+        
+        if (leftRef) observer.unobserve(leftRef);
+        if (rightRef) observer.unobserve(rightRef);
       });
     };
   }, []);
