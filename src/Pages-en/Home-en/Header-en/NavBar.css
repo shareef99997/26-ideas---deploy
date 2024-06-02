@@ -67,17 +67,39 @@ nav.scrolled .nav-menu li a{
 .Contact-btn{
   background-color: white;
   color: white;
-  padding: 12px 20px;
+  
 }
 
 @media (max-width: 920px) {
   #lang {
     margin-left: 0;
+    
   }
   #burger-menu {
 
-    margin-left:20px;
-    margin-right:20px;
+    margin-left:0px;
+    
 
+  }
+  #lang .lang-dropdown a {
+    font-size:12px ;
+  }
+
+  #main-nav .burger-menu {
+    display: block;
+    cursor: pointer;
+    order: 3;
+    z-index: 1001; /* Ensure burger menu is on top */
+  }
+  #main-nav .logo {
+    order: 2;
+    transform: scale(0.8);
+    margin: 0 auto; /* Center the logo horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #main-nav .lang {
+    order: 1;
   }
 }

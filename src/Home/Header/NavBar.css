@@ -126,7 +126,7 @@ nav.scrolled .Contact-btn {
 }
 
 .logo.scrolled-logo img {
-  width: 120px; /* Adjust the size as needed */
+  width: 80%; 
 }
 
 .lang {
@@ -141,6 +141,7 @@ nav.scrolled .Contact-btn {
   display: flex;
   align-items: center;
   background: transparent;
+  padding: 0;
 }
 
 .en::before{
@@ -192,23 +193,25 @@ nav.scrolled .Contact-btn {
 @media (max-width: 1062px) {
   .Contact-btn{
     font-size: 10px;
-    padding-right: 20px;
+    font-size:13px ;
   }
 }
 
 @media (max-width: 920px) {
   .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 30px;
   }
 
   .nav-menu {
-    
     flex-direction: column;
     position: fixed;
     top: 0;
     right: 0;
     background-color: rgba(1, 33, 41, 0.799);
-    width: 30%;
+    width: 40%; /* Adjusted to cover more screen space */
     height: calc(100vh);
     justify-content: center;
     align-items: center;
@@ -222,18 +225,18 @@ nav.scrolled .Contact-btn {
 
   .nav-menu li a {
     font-size: 16px;
+  }
+
+  .Contact-btn {
+    font-size: 11px;
     
   }
 
-  .Contact-btn{
-    font-size: 14px;
-  }
-
-  .Cont{
+  .Cont {
     display: none;
   }
 
-  .cbl{
+  .cbl {
     display: block;
     font-size: 10px;
   }
@@ -247,13 +250,13 @@ nav.scrolled .Contact-btn {
     display: block;
     cursor: pointer;
     order: 1;
-    margin-left:20px;
     z-index: 1001; /* Ensure burger menu is on top */
+    margin-left: 40px;
   }
 
   .burger-menu div {
     width: 30px;
-    height: 3px;
+    height: 2px;
     background-color: white;
     margin: 6px 0;
     transition: all 0.3s ease;
@@ -290,18 +293,25 @@ nav.scrolled .Contact-btn {
   .logo {
     order: 2;
     transform: scale(0.8);
-    margin: 0;
+    margin: 0 auto; /* Center the logo horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .logo img {
-    
+    display: block;
+    width: 80%; 
   }
 
   .lang {
     order: 3;
-    
   }
-  .lang a{
+  .lang .lang-dropdown a {
+    font-size:12px ;
+  }
+
+  .lang .en {
     font-size: 12px;
   }
 
@@ -312,13 +322,14 @@ nav.scrolled .Contact-btn {
 }
 
 
+
 @media (max-width: 375px) {
   .burger-menu {
     display: block;
     cursor: pointer;
     
   }
-  .lang a{
+  .lang .en{
     font-size: 12px;
   }
 }

@@ -240,6 +240,21 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .Footer-Section ul li.email::after {
+   display: none;
+  }
+  
+  .Footer-Section ul li.phone::after {
+    display: none;
+  }
+  
+  .Footer-Section ul li.location::after {
+    display: none;
+  }
+  
+  .Footer-Section ul li.question::after {
+    display: none;
+  }
   .Footer-Content {
     flex-direction: column;
     align-items: center;
@@ -249,12 +264,14 @@
     margin: 0;
   }
 
-  .about-footer{
-    margin-left: 10px;
-  }
-
+  
   .about-footer li{
-   align-items: center;
+    align-self: center;
+    padding: 0;
+   }
+
+  .about-footer img{
+   margin-right: 17px;
   }
 
   .services-footer{

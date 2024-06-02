@@ -43,64 +43,77 @@ function Services_en() {
       </p>
 
       <div className="Services-Grid fade-in-element hidden">
+
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-robot Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>AI Solutions</h3>
-            <p>We offer custom applications utilizing AI technologies such as deep learning and data analysis, and we design and develop intelligent robots for various sectors.</p>
-          </div>
+          <a href="/en/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-robot Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>AI Solutions</h3>
+              <p>We offer custom applications utilizing AI technologies such as deep learning and data analysis, and we design and develop intelligent robots for various sectors.</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-laptop-code Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>Web Development</h3>
-            <p>We provide innovative web design and development, as well as mobile application development.</p>
-          </div>
+          <a href="/en/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-laptop-code Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>Web Development</h3>
+              <p>We provide innovative web design and development, as well as mobile application development.</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-mobile-alt Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>Mobile App Development</h3>
-            <p>We offer innovative design for mobile application development.</p>
-          </div>
+          <a href="/en/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-mobile-alt Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>Mobile App Development</h3>
+              <p>We offer innovative design for mobile application development.</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-bullhorn Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>Digital Marketing</h3>
-            <p>Promote your products or services through social media, online advertising, and email marketing.</p>
-          </div>
+          <a href="/en/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-bullhorn Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>Digital Marketing</h3>
+              <p>Promote your products or services through social media, online advertising, and email marketing.</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-lightbulb Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>Innovative Tech Products</h3>
-            <p>We offer smart devices that integrate with AI software to assist with work and daily tasks.</p>
-          </div>
+          <a href="/en/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-lightbulb Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>Innovative Tech Products</h3>
+              <p>We offer smart devices that integrate with AI software to assist with work and daily tasks.</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-handshake Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>Consulting</h3>
-            <p>We help businesses and individuals achieve their tech goals with modern software and tools.</p>
-          </div>
+          <a href="/en/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-handshake Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>Consulting</h3>
+              <p>We help businesses and individuals achieve their tech goals with modern software and tools.</p>
+            </div>
+          </a>
         </div>
       </div>
 
       <div className="Button-Container fade-in-element hidden">
-        <a className='link' href="/en/Services">
+        <a className='link' href="/en/services">
           <button className="Learn-More-Button">Learn About Our Services</button>
         </a>
       </div>

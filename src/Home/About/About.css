@@ -3,24 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+
   width: 100%;
   position: relative; /* Add relative positioning */
   overflow: hidden; /* Ensure no overflow issues */
  
 }
 
-.About-img-Wrapper {
-  padding-top: 20px;
-  max-width: 200px;
-  align-self: center;
-  display: none;
-}
-
-.About-img-Wrapper img {
-  width: 100%;
-  border-radius: 15px;
-}
 
 .About-content {
   margin-top: 2%;
@@ -120,7 +109,14 @@
   .right-section h2{
     font-size: 40px;
   }
-  .right-section p {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
     
   }
 }
@@ -167,6 +163,7 @@
 }
 
 @media (max-width: 800px) {
+  
 
   .About-content {
     flex-direction: column-reverse;
@@ -218,7 +215,7 @@
   }
 
   .left-section{
-    max-width:250px ;
+    max-width:200px ;
     padding-top: 50px;
   }
 

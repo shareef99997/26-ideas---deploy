@@ -23,7 +23,7 @@ function NavBar_en({ currentPage }) {
   }, []);
 
   return (
-    <nav className={`main-nav ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`main-nav ${scrolled ? 'scrolled' : ''}`} id="main-nav">
       <div className="nav-content">
         <div className={`logo ${scrolled ? 'scrolled-logo' : ''}`}>
           {/* Change anchor tag to button if it doesn't navigate anywhere */}

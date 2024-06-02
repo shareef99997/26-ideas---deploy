@@ -168,92 +168,104 @@ function Services() {
             </p>
 
             <div className="Services-Grid fade-in-element hidden">
+
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-robot Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>حلول الذكاء الاصطناعي</h3>
-                  <p>نقدم تطبيقات مخصصة تستفيد من تقنيات الذكاء الاصطناعي مثل التعلم العميق وتحليل البيانات وتصميم وتطوير روبوتات ذكية للقطاعات المختلفة</p>
-                </div>
+        <a href="/contact-us" >
+          <div className="Service-Upper" lang="en">
+            <i className="fas fa-robot Service-Icon"></i>
+          </div>
+          <div className="Service-Lower">
+            <h3>حلول الذكاء الاصطناعي</h3>
+            <p>نقدم تطبيقات مخصصة تستفيد من تقنيات الذكاء الاصطناعي مثل التعلم العميق وتحليل البيانات وتصميم وتطوير روبوتات ذكية للقطاعات المختلفة</p>
+          </div>
+        </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-laptop-code Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>تطوير المواقع الإلكترونية</h3>
-                  <p>نقدم تصميمًا مبتكرًا وتطويرًا للمواقع الإلكترونية وتطوير تطبيقات الهاتف المحمول</p>
-                </div>
+                <a href="/contact-us" >
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-laptop-code Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>تطوير المواقع الإلكترونية</h3>
+                    <p>نقدم تصميمًا مبتكرًا وتطويرًا للمواقع الإلكترونية وتطوير تطبيقات الهاتف المحمول</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-mobile-alt Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>تطوير تطبيقات الجوال</h3>
-                  <p>نقدم تصميمًا مبتكرًا لتطوير تطبيقات الهاتف المحمول</p>
-                </div>
+                <a href="/contact-us" >
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-mobile-alt Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>تطوير تطبيقات الجوال</h3>
+                    <p>نقدم تصميمًا مبتكرًا لتطوير تطبيقات الهاتف المحمول</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-bullhorn Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>التسويق الإلكتروني</h3>
-                  <p>ترويج لمنتجاتك أو خدماتك عبر وسائل التواصل الاجتماعي, الإعلانات عبر الإنترنت والتسويق عبر البريد الإلكتروني</p>
-                </div>
+                <a  href="/contact-us" >
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-bullhorn Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>التسويق الإلكتروني</h3>
+                    <p>ترويج لمنتجاتك أو خدماتك عبر وسائل التواصل الاجتماعي, الإعلانات عبر الإنترنت والتسويق عبر البريد الإلكتروني</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-lightbulb Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>منتجات تقنية مبتكرة</h3>
-                  <p>نقدم أجهزة ذكية تتوافق مع برمجيات الذكاء الاصطناعي لخدمة العمل والمهام اليومية.</p>
-                </div>
+                <a  href="/contact-us" >
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-lightbulb Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>منتجات تقنية مبتكرة</h3>
+                    <p>نقدم أجهزة ذكية تتوافق مع برمجيات الذكاء الاصطناعي لخدمة العمل والمهام اليومية.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-handshake Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>الاستشارات</h3>
-                  <p>نساعد الشركات والأفراد على تحقيق أهدافهم التقنية ببرمجيات وأدوات حديثة</p>
-                </div>
+                <a href="/contact-us" >
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-handshake Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>الاستشارات</h3>
+                    <p>نساعد الشركات والأفراد على تحقيق أهدافهم التقنية ببرمجيات وأدوات حديثة</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
+              <a href="/contact-us" ><div className="Service-Upper"lang="en">
                   <i className="fas fa-cogs Service-Icon"></i> {/* ERP Icon */}
                 </div>
                 <div className="Service-Lower">
                   <h3> (ERP) تخطيط موارد المؤسسات </h3>
                   <p> تساعد هذه البرمجيات الشركات على تحسين عمليات البيع وتقديم تجربة سلسة للعملاء. تتضمن ميزات مثل تتبع المبيعات، إدارة المخزون، وتحليلات البيانات لاتخاذ قرارات أكثر ذكاءً. </p>
-                </div>
+                </div></a>
+                
               </div>
               <div className="Service-Box fade-in-element hidden">
+              <a href="/contact-us" >
                 <div className="Service-Upper"lang="en">
                   <i className="fas fa-warehouse Service-Icon"></i> {/* Inventory Management Icon */}
                 </div>
                 <div className="Service-Lower">
                   <h3> برمجيات إدارة المخزون </h3>
                   <p> تساعد هذه البرمجيات الشركات على تنظيم المخازن بكفاءة، من خلال تسهيل عمليات الاستلام، التسليم، التخزين، والجرد، مما يساهم في تحسين دقة البيانات واتخاذ قرارات أفضل </p>
-                </div>
+                </div></a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-cash-register Service-Icon"></i> {/* Sales and POS Icon */}
-                </div>
-                <div className="Service-Lower">
-                  <h3> برمجيات إدارة المبيعات و نقاط البيع </h3>
-                  <p> تساعد هذه البرمجيات الشركات على تحسين عمليات البيع وتقديم تجربة سلسة للعملاء. تتضمن ميزات مثل تتبع المبيعات، إدارة المخزون، وتحليلات البيانات لاتخاذ قرارات أكثر ذكاءً. </p>
-                </div>
+                <a href="/contact-us" >
+                  <div className="Service-Upper"lang="en">
+                    <i className="fas fa-cash-register Service-Icon"></i> {/* Sales and POS Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3> برمجيات إدارة المبيعات و نقاط البيع </h3>
+                    <p> تساعد هذه البرمجيات الشركات على تحسين عمليات البيع وتقديم تجربة سلسة للعملاء. تتضمن ميزات مثل تتبع المبيعات، إدارة المخزون، وتحليلات البيانات لاتخاذ قرارات أكثر ذكاءً. </p>
+                  </div>
+                </a>
               </div>
-
-
-
-
-
             </div>
 
             <div className="Button-Container fade-in-element hidden">

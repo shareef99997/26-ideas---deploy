@@ -239,9 +239,27 @@
     margin: 0;
   }
 
+  .Footer-Section-en ul li.email::before {
+    display: none;
+   }
+   
+   .Footer-Section-en ul li.phone::before {
+     display: none;
+   }
+   
+   .Footer-Section-en ul li.location::before {
+     display: none;
+   }
+   
+   .Footer-Section-en ul li.question::before {
+     display: none;
+   }
+
   .about-footer-en{
     margin-left: 10px;
   }
+
+  
 
   .about-footer-en li{
    align-self: center;

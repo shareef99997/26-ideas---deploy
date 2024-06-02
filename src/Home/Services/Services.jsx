@@ -44,6 +44,7 @@ function Services() {
 
       <div className="Services-Grid fade-in-element hidden">
         <div className="Service-Box fade-in-element hidden">
+        <a href="/contact-us" >
           <div className="Service-Upper" lang="en">
             <i className="fas fa-robot Service-Icon"></i>
           </div>
@@ -51,51 +52,62 @@ function Services() {
             <h3>حلول الذكاء الاصطناعي</h3>
             <p>نقدم تطبيقات مخصصة تستفيد من تقنيات الذكاء الاصطناعي مثل التعلم العميق وتحليل البيانات وتصميم وتطوير روبوتات ذكية للقطاعات المختلفة</p>
           </div>
+        </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-laptop-code Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>تطوير المواقع الإلكترونية</h3>
-            <p>نقدم تصميمًا مبتكرًا وتطويرًا للمواقع الإلكترونية وتطوير تطبيقات الهاتف المحمول</p>
-          </div>
+          <a href="/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-laptop-code Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>تطوير المواقع الإلكترونية</h3>
+              <p>نقدم تصميمًا مبتكرًا وتطويرًا للمواقع الإلكترونية وتطوير تطبيقات الهاتف المحمول</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-mobile-alt Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>تطوير تطبيقات الجوال</h3>
-            <p>نقدم تصميمًا مبتكرًا لتطوير تطبيقات الهاتف المحمول</p>
-          </div>
+          <a href="/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-mobile-alt Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>تطوير تطبيقات الجوال</h3>
+              <p>نقدم تصميمًا مبتكرًا لتطوير تطبيقات الهاتف المحمول</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-bullhorn Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>التسويق الإلكتروني</h3>
-            <p>ترويج لمنتجاتك أو خدماتك عبر وسائل التواصل الاجتماعي, الإعلانات عبر الإنترنت والتسويق عبر البريد الإلكتروني</p>
-          </div>
+          <a  href="/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-bullhorn Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>التسويق الإلكتروني</h3>
+              <p>ترويج لمنتجاتك أو خدماتك عبر وسائل التواصل الاجتماعي, الإعلانات عبر الإنترنت والتسويق عبر البريد الإلكتروني</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-lightbulb Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>منتجات تقنية مبتكرة</h3>
-            <p>نقدم أجهزة ذكية تتوافق مع برمجيات الذكاء الاصطناعي لخدمة العمل والمهام اليومية.</p>
-          </div>
+          <a  href="/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-lightbulb Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>منتجات تقنية مبتكرة</h3>
+              <p>نقدم أجهزة ذكية تتوافق مع برمجيات الذكاء الاصطناعي لخدمة العمل والمهام اليومية.</p>
+            </div>
+          </a>
         </div>
         <div className="Service-Box fade-in-element hidden">
-          <div className="Service-Upper" lang="en">
-            <i className="fas fa-handshake Service-Icon"></i>
-          </div>
-          <div className="Service-Lower">
-            <h3>الاستشارات</h3>
-            <p>نساعد الشركات والأفراد على تحقيق أهدافهم التقنية ببرمجيات وأدوات حديثة</p>
-          </div>
+          <a href="/contact-us" >
+            <div className="Service-Upper" lang="en">
+              <i className="fas fa-handshake Service-Icon"></i>
+            </div>
+            <div className="Service-Lower">
+              <h3>الاستشارات</h3>
+              <p>نساعد الشركات والأفراد على تحقيق أهدافهم التقنية ببرمجيات وأدوات حديثة</p>
+            </div>
+          </a>
         </div>
       </div>
 

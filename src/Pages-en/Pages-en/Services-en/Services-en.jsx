@@ -168,86 +168,105 @@ function Services_en() {
 
             <div className="Services-Grid fade-in-element hidden">
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-robot Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>AI Solutions</h3>
-                  <p>We provide custom applications utilizing AI technologies like deep learning, data analysis, and design and development of intelligent robots for various sectors.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-robot Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>AI Solutions</h3>
+                    <p>We provide custom applications utilizing AI technologies like deep learning, data analysis, and design and development of intelligent robots for various sectors.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-laptop-code Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>Web Development</h3>
-                  <p>We offer innovative design and development of websites and mobile application development.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-laptop-code Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Web Development</h3>
+                    <p>We offer innovative design and development of websites and mobile application development.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-mobile-alt Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>Mobile App Development</h3>
-                  <p>We offer innovative design for mobile application development.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-mobile-alt Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Mobile App Development</h3>
+                    <p>We offer innovative design for mobile application development.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-bullhorn Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>Digital Marketing</h3>
-                  <p>Promote your products or services through social media, online advertising, and email marketing.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-bullhorn Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Digital Marketing</h3>
+                    <p>Promote your products or services through social media, online advertising, and email marketing.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-lightbulb Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>Innovative Tech Products</h3>
-                  <p>We provide smart devices compatible with AI software for business and daily tasks.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-lightbulb Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Innovative Tech Products</h3>
+                    <p>We provide smart devices compatible with AI software for business and daily tasks.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-handshake Service-Icon"></i>
-                </div>
-                <div className="Service-Lower">
-                  <h3>Consultations</h3>
-                  <p>We help businesses and individuals achieve their technical goals with modern software and tools.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-handshake Service-Icon"></i>
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Consultations</h3>
+                    <p>We help businesses and individuals achieve their technical goals with modern software and tools.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-cogs Service-Icon"></i> {/* ERP Icon */}
-                </div>
-                <div className="Service-Lower">
-                  <h3>Enterprise Resource Planning (ERP)</h3>
-                  <p>This software helps companies improve sales processes and provide a seamless customer experience. Features include sales tracking, inventory management, and data analytics for smarter decision-making.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-cogs Service-Icon"></i> {/* ERP Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Enterprise Resource Planning (ERP)</h3>
+                    <p>This software helps companies improve sales processes and provide a seamless customer experience. Features include sales tracking, inventory management, and data analytics for smarter decision-making.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-warehouse Service-Icon"></i> {/* Inventory Management Icon */}
-                </div>
-                <div className="Service-Lower">
-                  <h3>Inventory Management Software</h3>
-                  <p>This software helps companies efficiently organize warehouses by facilitating receiving, shipping, storage, and inventory processes, improving data accuracy and decision-making.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-warehouse Service-Icon"></i> {/* Inventory Management Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Inventory Management Software</h3>
+                    <p>This software helps companies efficiently organize warehouses by facilitating receiving, shipping, storage, and inventory processes, improving data accuracy and decision-making.</p>
+                  </div>
+                </a>
               </div>
               <div className="Service-Box fade-in-element hidden">
-                <div className="Service-Upper"lang="en">
-                  <i className="fas fa-cash-register Service-Icon"></i> {/* Sales and POS Icon */}
-                </div>
-                <div className="Service-Lower">
-                  <h3>Sales and POS Management Software</h3>
-                  <p>This software helps companies improve sales processes and provide a seamless customer experience. Features include sales tracking, inventory management, and data analytics for smarter decision-making.</p>
-                </div>
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-cash-register Service-Icon"></i> {/* Sales and POS Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Sales and POS Management Software</h3>
+                    <p>This software helps companies improve sales processes and provide a seamless customer experience. Features include sales tracking, inventory management, and data analytics for smarter decision-making.</p>
+                  </div>
+                </a>
               </div>
+
             </div>
 
             <div className="Button-Container fade-in-element hidden">

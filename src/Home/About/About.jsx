@@ -55,9 +55,7 @@ function About() {
   return (
     <div className="About" id="About" >
       <div className='About-Body'>
-        <div className='About-img-Wrapper' ref={logoRef}>
-          <img src={require('../../Assets/Logo/LOGO.png')} alt="Logo" />
-        </div>
+        
         <div className="About-content">
 
           <section className="left-section" ref={leftSectionRef}>
