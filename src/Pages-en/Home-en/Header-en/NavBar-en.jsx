@@ -41,7 +41,7 @@ function NavBar_en({ currentPage }) {
             <a href="/en/services">Services</a>
           </li>
           <li className={`${currentPage === 'store' ? 'active' : ''}`}>
-            <a href="http://www.nextech-sa.com" target="_blank">Store</a>
+            <a href="http://www.nextech-sa.com"  rel="noreferrer" target="_blank">Store</a>
           </li>
           <li className={`${currentPage === 'join-us' ? 'active' : ''}`}>
             <a href="/en/join-us">Join Us</a>

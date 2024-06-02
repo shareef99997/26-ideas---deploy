@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, } from 'react';
 import './Header.css';
-import NavBar_en from './NavBar-en';
+import NAVBAR_EN from './NavBar-en';
 import { ReactTyped } from 'react-typed';
 
 function Header_en() {
@@ -14,7 +14,7 @@ function Header_en() {
         Your browser does not support the video tag.
       </video>
       <div className="overlay"></div>
-      <NavBar_en currentPage="home"/>
+      <NAVBAR_EN currentPage="home"/>
       <div className="Header-Body">
         <div className="home-content">
           <h1><ReactTyped

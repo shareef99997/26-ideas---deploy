@@ -47,7 +47,7 @@ function Join_us() {
         <div className="flex-container">
           {/* Image Container */}
           <div className="image-container">
-            <img src={require("../../Assets/Images/join-us.jpg")}  />
+            <img src={require("../../Assets/Images/join-us.jpg")} alt="Project Management" />
           </div>
           <form className="Join-us-form" onSubmit={handleSubmit}>
             <div className="form-row">

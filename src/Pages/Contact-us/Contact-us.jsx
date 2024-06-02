@@ -77,7 +77,7 @@ function Contact_us() {
               </ul>
             </div>
             <div className="map-container">
-              <iframe 
+              <iframe title='map'
                 src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d226.8030492323786!2d46.54453093601342!3d24.559887015517578!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1716969955481!5m2!1sen!2sau" 
                 width="100%" 
                 height="100%" 
