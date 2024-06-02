@@ -67,7 +67,7 @@ function NavBar_en({ currentPage }) {
           </a>
         </div>
         <div className="lang" id='lang'>
-          <a href="#" rel="noreferrer" className="en">
+          <a href="javascript:void(0)" rel="noreferrer" className="en">
             English
           </a>
           <div className="lang-dropdown">
@@ -77,6 +77,7 @@ function NavBar_en({ currentPage }) {
         <div className={`burger-menu ${menuOpen ? 'toggle' : ''} ${scrolled ? 'scrolled' : ''}`} id='burger-menu' onClick={toggleMenu}>
           <div></div>
           <div></div>
+
           <div></div>
         </div>
       </div>

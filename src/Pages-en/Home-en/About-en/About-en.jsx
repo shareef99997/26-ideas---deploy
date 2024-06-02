@@ -21,31 +21,36 @@ function About_en() {
       },
       { threshold: 0.1 }
     );
-
-    if (leftSectionRef.current) {
-      leftSectionRef.current.classList.add('hidden');
-      leftSectionRef.current.dataset.animation = 'fade-in-right';
-      observer.observe(leftSectionRef.current);
+  
+    const leftSection = leftSectionRef.current;
+    const rightSection = rightSectionRef.current;
+    const logo = logoRef.current;
+  
+    if (leftSection) {
+      leftSection.classList.add('hidden');
+      leftSection.dataset.animation = 'fade-in-right';
+      observer.observe(leftSection);
     }
-
-    if (rightSectionRef.current) {
-      rightSectionRef.current.classList.add('hidden');
-      rightSectionRef.current.dataset.animation = 'fade-in-left';
-      observer.observe(rightSectionRef.current);
+  
+    if (rightSection) {
+      rightSection.classList.add('hidden');
+      rightSection.dataset.animation = 'fade-in-left';
+      observer.observe(rightSection);
     }
-
-    if (logoRef.current) {
-      logoRef.current.classList.add('hidden');
-      logoRef.current.dataset.animation = 'fade-in-top';
-      observer.observe(logoRef.current);
+  
+    if (logo) {
+      logo.classList.add('hidden');
+      logo.dataset.animation = 'fade-in-top';
+      observer.observe(logo);
     }
-
+  
     return () => {
-      if (leftSectionRef.current) observer.unobserve(leftSectionRef.current);
-      if (rightSectionRef.current) observer.unobserve(rightSectionRef.current);
-      if (logoRef.current) observer.unobserve(logoRef.current);
+      if (leftSection) observer.unobserve(leftSection);
+      if (rightSection) observer.unobserve(rightSection);
+      if (logo) observer.unobserve(logo);
     };
   }, []);
+  
 
   return (
     <div className="About" id="About" >

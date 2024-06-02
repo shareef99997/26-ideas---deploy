@@ -97,7 +97,7 @@ function App() {
           <h3> Whatsapp </h3>
         </nav>
       </a>
-      <a href="#" rel="noreferrer" className={`up-arrow ${scrolled ? 'scrolled-arrow' : ''}`} onClick={scrollToHeader}>
+      <a href="javascript:void(0)" rel="noreferrer" className={`up-arrow ${scrolled ? 'scrolled-arrow' : ''}`} onClick={scrollToHeader}>
         <div className="arrow-button">
           <img src={require('./Assets/Icons/up-arrow.png')} alt="Up Arrow" />
         </div>

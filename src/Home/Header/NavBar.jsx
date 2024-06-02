@@ -61,7 +61,7 @@ function NavBar({ currentPage }) {
           </a>
         </div>
         <div className="lang">
-          <a href="#" rel="noreferrer" className="en">
+          <a href="javascript:void(0)" rel="noreferrer" className="en">
             العربية
           </a>
           <div className="lang-dropdown">
