@@ -45,7 +45,7 @@ function Contact_us_en() {
     e.preventDefault();
 
     // Send the form data using EmailJS
-    emailjs.sendForm('Contact-ID', 'contact-template', e.target, 'JdYCKw_3DG1bk8E92')
+    emailjs.sendForm('Contact-ID', 'contact-template', e.target, 'kQjXhKO0mvsWWtzGA')
       .then((result) => {
         console.log('Email sent successfully:', result.text);
         alert('message was sent sucsessfully');

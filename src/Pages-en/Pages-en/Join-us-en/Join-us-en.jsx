@@ -3,10 +3,11 @@ import './Join-us.css';
 import NavBar from "../../Home-en/Header-en/NavBar-en";
 import Footer from '../../Home-en/Footer-en/Footer-en';
 import Contact from '../../Home-en/Contact-en/Contact-en';
+import emailjs from 'emailjs-com';
 
 function Join_us_en() {
   const [formData, setFormData] = useState({
-    firstName: '',
+    fullName: '',
     lastName: '',
     phoneNumber: '',
     dateOfBirth: '',
@@ -26,8 +27,24 @@ function Join_us_en() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    // You can replace this with any other actions you want to perform on form submission.
+    
+    // Send the form data using EmailJS
+    emailjs.sendForm('Join-ID', 'Join-us-template', e.target, 'kQjXhKO0mvsWWtzGA')
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        alert('Email sent successfully');
+        // Reset the form after successful submission
+        setFormData({
+          fullName: '',
+          phoneNumber: '',
+          department: '',
+          subject: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        console.error('Email send error:', error.text);
+      });
   };
 
   return (
@@ -41,35 +58,24 @@ function Join_us_en() {
       <div className='Join-us-body Page-Body'>
         <div className="Join-us-title Page-title-container">
           <h1 className="Services-title">Join 26 Ideas Team</h1>
-          <p className="description"> Become a member of the family now </p>
+          <p className="description">Become a member of the family now</p>
         </div>
-        <div className="flex-container-en"><form className="Join-us-form" onSubmit={handleSubmit}>
-            <div className="form-row">
-              <div className="form-group-en">
+        <div className="flex-container-en">
+          <form className="Join-us-form" onSubmit={handleSubmit}>
+
+            <div className="form-group-en">
                 <input 
                   type="text" 
-                  id="firstName" 
-                  name="firstName" 
-                  value={formData.firstName} 
+                  id="fullName" 
+                  name="fullName" 
+                  value={formData.fullName} 
                   onChange={handleChange} 
                   required 
                   placeholder=" " 
                 />
-                <label htmlFor="firstName">First Name</label>
-              </div>
-              <div className="form-group-en">
-                <input 
-                  type="text" 
-                  id="lastName" 
-                  name="lastName" 
-                  value={formData.lastName} 
-                  onChange={handleChange} 
-                  required 
-                  placeholder=" " 
-                />
-                <label htmlFor="lastName">Last Name</label>
-              </div>
+                <label htmlFor="fullName">Full Name</label>
             </div>
+              
             <div className="form-group-en">
               <input 
                 type="tel" 
@@ -104,7 +110,7 @@ function Join_us_en() {
                 name="subject" 
                 value={formData.subject} 
                 onChange={handleChange} 
-                required 
+                
                 placeholder=" " 
               />
               <label htmlFor="subject">Subject</label>
@@ -121,22 +127,12 @@ function Join_us_en() {
               ></textarea>
               <label htmlFor="message">Message</label>
             </div>
-            <div className="form-group-en">
-              <input 
-                type="file" 
-                id="attachment" 
-                name="attachment" 
-                onChange={handleChange} 
-              />
-              <label htmlFor="attachment">CV Attachment</label>
-            </div>
             <button type="submit" className="submit-button">Submit</button>
           </form>
           {/* Image Container */}
           <div className="image-container">
             <img src={require("../../../Assets/Images/join-us.jpg")} alt="Project Management" />
           </div>
-          
         </div>
       </div>
       <Contact />
@@ -146,4 +142,3 @@ function Join_us_en() {
 }
 
 export default Join_us_en;
-

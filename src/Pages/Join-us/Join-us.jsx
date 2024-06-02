@@ -3,8 +3,10 @@ import NavBar from '../../Home/Header/NavBar';
 import './Join-us.css';
 import Footer from '../../Home/Footer/Footer';
 import Contact from '../../Home/Contact/Contact';
+import emailjs from 'emailjs-com';
 
 function Join_us() {
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -24,10 +26,37 @@ function Join_us() {
     }));
   };
 
+
+  const handleAutofill = (e) => {
+    const { name, value } = e.target;
+    if (formData[name] !== value) {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    // You can replace this with any other actions you want to perform on form submission.
+    
+    // Send the form data using EmailJS
+    emailjs.sendForm('Join-ID', 'Join-us-template', e.target, 'kQjXhKO0mvsWWtzGA')
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        alert('تم الإرسال بنجاح');
+        // Reset the form after successful submission
+        setFormData({
+          fullName: '',
+          phoneNumber: '',
+          department: '',
+          subject: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        console.error('Email send error:', error.text);
+      });
   };
 
   return (
@@ -37,7 +66,6 @@ function Join_us() {
         <h2 className="Page-Title">إنضم إلينا</h2>
       </div>
 
-      
       {/* Page Body */}
       <div className='Join-us-body Page-Body'>
         <div className="Join-us-title Page-title-container">
@@ -50,39 +78,29 @@ function Join_us() {
             <img src={require("../../Assets/Images/join-us.jpg")} alt="Project Management" />
           </div>
           <form className="Join-us-form" onSubmit={handleSubmit}>
-            <div className="form-row">
-              <div className="form-group">
+            
+            <div className="form-group">
                 <input 
                   type="text" 
-                  id="firstName" 
-                  name="firstName" 
-                  value={formData.firstName} 
-                  onChange={handleChange} 
+                  id="fullName" 
+                  name="fullName" 
+                  value={formData.fullName} 
+                  onInput={handleChange} 
+                  onFocus={handleAutofill} 
                   required 
                   placeholder=" " 
                 />
-                <label htmlFor="firstName">الاسم الأول</label>
-              </div>
-              <div className="form-group">
-                <input 
-                  type="text" 
-                  id="lastName" 
-                  name="lastName" 
-                  value={formData.lastName} 
-                  onChange={handleChange} 
-                  required 
-                  placeholder=" " 
-                />
-                <label htmlFor="lastName">اسم العائلة</label>
-              </div>
+                <label htmlFor="fullName">الاسم الكامل</label>
             </div>
+            
             <div className="form-group">
               <input 
                 type="tel" 
                 id="phoneNumber" 
                 name="phoneNumber" 
                 value={formData.phoneNumber} 
-                onChange={handleChange} 
+                onInput={handleChange} 
+                onFocus={handleAutofill} 
                 required 
                 placeholder=" " 
               />
@@ -94,7 +112,8 @@ function Join_us() {
                 name="department" 
                 value={formData.department} 
                 onChange={handleChange} 
-                required
+                onFocus={handleAutofill} 
+                
                 placeholder=" " 
               >
                 <option value="" disabled hidden></option>
@@ -109,8 +128,8 @@ function Join_us() {
                 id="subject" 
                 name="subject" 
                 value={formData.subject} 
-                onChange={handleChange} 
-                required 
+                onInput={handleChange} 
+                onFocus={handleAutofill} 
                 placeholder=" " 
               />
               <label htmlFor="subject">الموضوع</label>
@@ -120,14 +139,15 @@ function Join_us() {
                 id="message" 
                 name="message" 
                 value={formData.message} 
-                onChange={handleChange} 
+                onInput={handleChange} 
+                onFocus={handleAutofill} 
                 rows="2" 
                 required 
                 placeholder=" " 
               ></textarea>
               <label htmlFor="message">الرسالة</label>
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <input 
                 type="file" 
                 id="attachment" 
@@ -135,7 +155,7 @@ function Join_us() {
                 onChange={handleChange} 
               />
               <label htmlFor="attachment"> السيرة الذاتية (CV) </label>
-            </div>
+            </div> */}
             <button type="submit" className="submit-button">إرسال</button>
           </form>
         </div>
