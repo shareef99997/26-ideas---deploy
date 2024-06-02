@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
 import Home from './Home/Home';
 import AboutUs from './Pages/About-us/About-us'; // Use consistent naming conventions
@@ -96,7 +97,7 @@ function App() {
           <h3> Whatsapp </h3>
         </nav>
       </a>
-      <a  rel="noreferrer" className={`up-arrow ${scrolled ? 'scrolled-arrow' : ''}`} onClick={scrollToHeader}>
+      <a href="#" rel="noreferrer" className={`up-arrow ${scrolled ? 'scrolled-arrow' : ''}`} onClick={scrollToHeader}>
         <div className="arrow-button">
           <img src={require('./Assets/Icons/up-arrow.png')} alt="Up Arrow" />
         </div>

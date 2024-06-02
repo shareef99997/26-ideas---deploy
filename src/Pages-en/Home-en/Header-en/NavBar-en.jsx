@@ -62,7 +62,7 @@ function NavBar_en({ currentPage }) {
         </div>
         <div className="lang" id='lang'>
         
-          <a  className="en">
+          <a href="#" rel="noreferrer" className="en">
             English
           </a>
         

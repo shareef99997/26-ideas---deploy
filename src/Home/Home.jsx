@@ -1,23 +1,23 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Home.css';
-import Header from './Header/Header';
-import Services from './Services/Services';
-import Offers from './Offers/Offers';
-import About from './About/About';
-import Footer from '../Home/Footer/Footer';
-import Contact from '../Home/Contact/Contact';
+import HEADER from './Header/Header';
+import SERVICES from './Services/Services';
+import OFFERS from './Offers/Offers';
+import ABOUT from './About/About';
+import FOOTER from '../Home/Footer/Footer';
+import CONTACT from '../Home/Contact/Contact';
 
 
 function Home() {
   return (
     <div className="Home" lang="ar">
       
-      <Header />
-      <About />
-      <Services />
-      <Offers />
-      <Contact />
-      <Footer />
+      <HEADER />
+      <ABOUT />
+      <SERVICES />
+      <OFFERS />
+      <CONTACT />
+      <FOOTER />
     </div>
   );
 }
