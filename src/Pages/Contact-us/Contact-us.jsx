@@ -7,6 +7,7 @@ import { faInstagram, faFacebookF, faSnapchat, faXTwitter,faTiktok } from '@fort
 import { library } from '@fortawesome/fontawesome-svg-core';
 import Footer from '../../Home/Footer/Footer';
 import Contact from '../../Home/Contact/Contact';
+import emailjs from 'emailjs-com';
 
 library.add(faEnvelope, faMapMarkerAlt, faQuestionCircle, faInstagram, faFacebookF, faSnapchat, faXTwitter,faTiktok);
 
@@ -28,12 +29,42 @@ function Contact_us() {
       [name]: files ? files[0] : value,
     }));
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form Data:', formData);
-    // You can replace this with any other actions you want to perform on form submission.
+  
+  // Add onFocus event handler to capture autofilled values
+  const handleAutofill = (e) => {
+    const { name, value } = e.target;
+    // Check if the value is different from the current form state
+    if (formData[name] !== value) {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
+  
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  // Send the form data using EmailJS
+  emailjs.sendForm('Contact-ID', 'contact-template', e.target, 'JdYCKw_3DG1bk8E92')
+    .then((result) => {
+      console.log('Email sent successfully:', result.text);
+      alert('تم الإرسال بنجاح');
+      // Reset the form after successful submission
+      setFormData({
+        fullName: '',
+        phoneNumber: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    })
+    .catch((error) => {
+      console.error('Email send error:', error.text);
+    });
+};
+
 
   return (
     <div className="Contact-us" id="Contact-us" lang="ar">
@@ -95,7 +126,8 @@ function Contact_us() {
                 id="fullName" 
                 name="fullName" 
                 value={formData.fullName} 
-                onChange={handleChange} 
+                onInput={handleChange} 
+                onFocus={handleAutofill} 
                 required 
                 placeholder=" " 
               />
@@ -107,7 +139,8 @@ function Contact_us() {
                 id="phoneNumber" 
                 name="phoneNumber" 
                 value={formData.phoneNumber} 
-                onChange={handleChange} 
+                onInput={handleChange} 
+                onFocus={handleAutofill} 
                 required 
                 placeholder=" " 
               />
@@ -119,8 +152,8 @@ function Contact_us() {
                 id="email" 
                 name="email" 
                 value={formData.email} 
-                onChange={handleChange} 
-                required 
+                onInput={handleChange}  
+                onFocus={handleAutofill} 
                 placeholder=" " 
               />
               <label htmlFor="email">  البريد الإلكتروني   </label>
@@ -131,8 +164,8 @@ function Contact_us() {
                 id="subject" 
                 name="subject" 
                 value={formData.subject} 
-                onChange={handleChange} 
-                required 
+                onInput={handleChange} 
+                onFocus={handleAutofill}  
                 placeholder=" " 
               />
               <label htmlFor="subject">الموضوع</label>
@@ -142,8 +175,9 @@ function Contact_us() {
                 id="message" 
                 name="message" 
                 value={formData.message} 
-                onChange={handleChange} 
+                onInput={handleChange}  
                 rows="2" 
+                onFocus={handleAutofill} 
                 required 
                 placeholder=" " 
               ></textarea>

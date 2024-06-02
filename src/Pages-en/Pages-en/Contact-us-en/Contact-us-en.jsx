@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import NavBar from "../../Home-en/Header-en/NavBar-en";
 import Footer from '../../Home-en/Footer-en/Footer-en';
 import Contact from '../../Home-en/Contact-en/Contact-en';
+import emailjs from 'emailjs-com';
 
 library.add(faEnvelope, faMapMarkerAlt, faQuestionCircle, faInstagram, faFacebookF, faSnapchat, faXTwitter,faTiktok);
 
@@ -26,11 +27,40 @@ function Contact_us_en() {
       [name]: files ? files[0] : value,
     }));
   };
+  
+
+  const handleAutofill = (e) => {
+    const { name, value } = e.target;
+    // Check if the value is different from the current form state
+    if (formData[name] !== value) {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
+  };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    // You can replace this with any other actions you want to perform on form submission.
+
+    // Send the form data using EmailJS
+    emailjs.sendForm('Contact-ID', 'contact-template', e.target, 'JdYCKw_3DG1bk8E92')
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        alert('message was sent sucsessfully');
+        // Reset the form after successful submission
+        setFormData({
+          fullName: '',
+          phoneNumber: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        console.error('Email send error:', error.text);
+      });
   };
 
   return (
@@ -57,6 +87,7 @@ function Contact_us_en() {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
+                onFocus={handleAutofill} 
                 required
                 placeholder=" "
               />
@@ -69,6 +100,7 @@ function Contact_us_en() {
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleChange}
+                onFocus={handleAutofill}
                 required
                 placeholder=" "
               />
@@ -81,6 +113,7 @@ function Contact_us_en() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                onFocus={handleAutofill}
                 required
                 placeholder=" "
               />
@@ -93,7 +126,8 @@ function Contact_us_en() {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                required
+                onFocus={handleAutofill}
+                
                 placeholder=" "
               />
               <label htmlFor="subject">Subject</label>
@@ -104,6 +138,7 @@ function Contact_us_en() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                onFocus={handleAutofill}
                 rows="2"
                 required
                 placeholder=" "
