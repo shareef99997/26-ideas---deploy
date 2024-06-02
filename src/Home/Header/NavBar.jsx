@@ -66,9 +66,9 @@ function NavBar({ currentPage }) {
           </a>
           <div className="lang-dropdown">
             <a href="/en/" > 
-              <a>
+              
                 English
-              </a>
+              
             </a> 
           </div>
         </div>

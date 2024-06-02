@@ -7,12 +7,12 @@ import JoinUs from './Pages/Join-us/Join-us';
 import Blog from './Pages/Blog/Blog';
 import ContactUs from './Pages/Contact-us/Contact-us';
 
-import Home_En from './Pages-en/Home-en/Home-en.jsx';
-import AboutUs_En from './Pages-en/Pages-en/About-us-en/About-us-en.jsx'; // Use consistent naming conventions
-import Services_En from './Pages-en/Pages-en/Services-en/Services-en.jsx';
-import JoinUs_En from './Pages-en/Pages-en/Join-us-en/Join-us-en.jsx';
-import Blog_En from './Pages-en/Pages-en/Blog-en/Blog-en.jsx';
-import ContactUs_En from './Pages-en/Pages-en/Contact-us-en/Contact-us-en.jsx';
+import HOME_EN from './Pages-en/Home-en/Home-en.jsx';
+import ABOUTUS_EN from './Pages-en/Pages-en/About-us-en/About-us-en.jsx'; 
+import SERVICES_EN from './Pages-en/Pages-en/Services-en/Services-en.jsx';
+import JOINUS_EN from './Pages-en/Pages-en/Join-us-en/Join-us-en.jsx';
+import BLOG_EN from './Pages-en/Pages-en/Blog-en/Blog-en.jsx';
+import CONTACTUS_EN from './Pages-en/Pages-en/Contact-us-en/Contact-us-en.jsx';
 
 import React, { useState, useEffect } from 'react';
 
@@ -68,17 +68,17 @@ function App() {
       case '/contact-us':
         return <ContactUs />;
       case '/en/':
-        return <Home_En />;
+        return <HOME_EN />;
       case '/en/about-us':
-        return <AboutUs_En />;
+        return <ABOUTUS_EN />;
       case '/en/services':
-        return <Services_En />;
+        return <SERVICES_EN />;
       case '/en/join-us':
-        return <JoinUs_En />;
+        return <JOINUS_EN />;
       case '/en/blog':
-        return <Blog_En />;
+        return <BLOG_EN />;
       case '/en/contact-us':
-        return <ContactUs_En />;
+        return <CONTACTUS_EN />;
       case '/':
       default:
         return <Home />;
@@ -96,7 +96,7 @@ function App() {
           <h3> Whatsapp </h3>
         </nav>
       </a>
-      <a href='' className={`up-arrow ${scrolled ? 'scrolled-arrow' : ''}`} onClick={scrollToHeader}>
+      <a  rel="noreferrer" className={`up-arrow ${scrolled ? 'scrolled-arrow' : ''}`} onClick={scrollToHeader}>
         <div className="arrow-button">
           <img src={require('./Assets/Icons/up-arrow.png')} alt="Up Arrow" />
         </div>

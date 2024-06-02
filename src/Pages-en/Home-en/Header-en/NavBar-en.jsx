@@ -68,9 +68,8 @@ function NavBar_en({ currentPage }) {
         
           <div className="lang-dropdown">
           <a href="/" > 
-            <a>
+            
               العربية
-            </a>
           </a> 
           </div>
         </div>
