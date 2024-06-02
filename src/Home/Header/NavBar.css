@@ -83,7 +83,7 @@ nav.scrolled {
   transition: ease 0.3s;
 }
 
-nav.scrolled .lang a,
+nav.scrolled .lang .en,
 nav.scrolled .nav-menu li a{
   color: var(--main-color); /* Color when scrolled */
 }
@@ -134,12 +134,13 @@ nav.scrolled .Contact-btn {
   cursor: pointer;
 }
 
-.lang a {
+.en {
   text-decoration: none;
   color: white;
   font-size: 18px;
   display: flex;
   align-items: center;
+  background: transparent;
 }
 
 .en::before{
@@ -149,7 +150,7 @@ nav.scrolled .Contact-btn {
   transition: transform 0.3s ease-in-out;
 }
 
-.lang:hover a::after {
+.lang:hover .en::after {
   transform: rotate(180deg); /* Rotate the arrow when hovered */
 }
 
