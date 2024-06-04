@@ -133,18 +133,18 @@ function Services() {
                       }}
                       modules={[Autoplay, Navigation, Pagination, Scrollbar]} // Include required modules
                     >
-                      <SwiperSlide>
-                        <img className='Offers-pic' src={require('../../Assets/Images/project-management.jpg')} alt="AI Illustration 1" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img className='Offers-pic' src={require('../../Assets/Images/project-management.jpg')}alt="AI Illustration 2" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img className='Offers-pic' src={require('../../Assets/Images/project-management.jpg')} alt="AI Illustration 3" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img className='Offers-pic' src={require('../../Assets/Images/project-management.jpg')} alt="AI Illustration 3" />
-                      </SwiperSlide>
+                        <SwiperSlide>
+                  <img className='Offers-pic' src={require('../../Assets/Images/banner-1.jpg')} alt="AI Illustration 1" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img className='Offers-pic' src={require('../../Assets/Images/banner-2.jpg')}alt="AI Illustration 2" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img className='Offers-pic' src={require('../../Assets/Images/banner-3.jpg')} alt="AI Illustration 3" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img className='Offers-pic' src={require('../../Assets/Images/banner-4.jpg')} alt="AI Illustration 3" />
+                </SwiperSlide>
                     </Swiper>
                   </a>
                     
