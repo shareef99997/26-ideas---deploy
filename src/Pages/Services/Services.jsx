@@ -266,6 +266,40 @@ function Services() {
                   </div>
                 </a>
               </div>
+              {/* New Services */}
+              <div className="Service-Box fade-in-element hidden">
+                <a href="/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-cloud Service-Icon"></i> {/* Cloud Computing Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>خدمات الحوسبة السحابية</h3>
+                    <p>نقدم حلول الحوسبة السحابية لتعزيز البنية التحتية لتكنولوجيا المعلومات وزيادة الكفاءة التشغيلية.</p>
+                  </div>
+                </a>
+              </div>
+              <div className="Service-Box fade-in-element hidden">
+                <a href="/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-shield-alt Service-Icon"></i> {/* Security Systems Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>الأنظمة الأمنية</h3>
+                    <p>نوفر أنظمة أمنية متقدمة لحماية المؤسسات والمنازل من التهديدات والمخاطر.</p>
+                  </div>
+                </a>
+              </div>
+              <div className="Service-Box fade-in-element hidden">
+                <a href="/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-network-wired Service-Icon"></i> {/* Infrastructure and Networking Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>البنية التحتية والشبكات</h3>
+                    <p>نقدم خدمات تخطيط وتنفيذ البنية التحتية للشبكات لضمان تشغيل سلس واتصال دائم.</p>
+                  </div>
+                </a>
+              </div>
             </div>
 
             <div className="Button-Container fade-in-element hidden">
