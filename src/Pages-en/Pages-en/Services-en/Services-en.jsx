@@ -266,6 +266,40 @@ function Services_en() {
                   </div>
                 </a>
               </div>
+              {/* New Services */}
+              <div className="Service-Box fade-in-element hidden">
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-cloud Service-Icon"></i> {/* Cloud Computing Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Cloud Computing Services</h3>
+                    <p>We offer cloud computing solutions to enhance IT infrastructure and increase operational efficiency.</p>
+                  </div>
+                </a>
+              </div>
+              <div className="Service-Box fade-in-element hidden">
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-shield-alt Service-Icon"></i> {/* Security Systems Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Security Systems</h3>
+                    <p>We provide advanced security systems to protect businesses and homes from threats and risks.</p>
+                  </div>
+                </a>
+              </div>
+              <div className="Service-Box fade-in-element hidden">
+                <a href="/en/contact-us">
+                  <div className="Service-Upper" lang="en">
+                    <i className="fas fa-network-wired Service-Icon"></i> {/* Infrastructure and Networking Icon */}
+                  </div>
+                  <div className="Service-Lower">
+                    <h3>Infrastructure and Networking</h3>
+                    <p>We offer network infrastructure planning and implementation services to ensure smooth operation and constant connectivity.</p>
+                  </div>
+                </a>
+              </div>
               
 
             </div>
