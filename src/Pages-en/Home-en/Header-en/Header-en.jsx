@@ -21,7 +21,7 @@ function Header_en() {
             strings={['Your first step towards your digital future']}
             typeSpeed={10}
             onComplete={() => setShowDescription(true)}
-            startDelay={100}
+            startDelay={3300}
           /></h1>
           <p>
           {showDescription && (

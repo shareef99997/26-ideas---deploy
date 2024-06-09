@@ -21,16 +21,16 @@ function Header() {
             strings={['خطوتك الأولى نحو مستقبلك الرقمي']}
             typeSpeed={10}
             onComplete={() => setShowDescription(true)}
-            startDelay={100}
+            startDelay={3300}
           /></h1>
           <p>
           {showDescription && (
             
               <ReactTyped
               strings={[
-                'نحن هنا لنقدم لك أفضل الحلول التقنية الحديثة. سواء كنت تبحث عن تطوير البرمجيات، التجارة الإلكترونية أو استشارات تقنية فإننا هنا لخدمتك',
+                ' اكتشف الابتكار الذي لا حدود له مع حلولنا التقنية المتقدمة، حيث نجمع بين خبراتنا العميقة في تطوير البرمجيات وأحدث تقنيات الذكاء الاصطناعي لتقديم تجربة فريدة في التجارة الإلكترونية والاستشارات.',
               ]}
-              typeSpeed={5}
+              typeSpeed={3}
               startDelay={400} // Small delay before starting the paragraph typing
               />
             

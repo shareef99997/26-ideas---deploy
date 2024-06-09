@@ -44,7 +44,7 @@
 .A-one img{
   width: 100%;
   border-radius: 15px;
-  max-height: 80%;
+  
 }
 
 .right-section-ab h1,
@@ -74,6 +74,7 @@
 
 .description-wrapper {
   margin-bottom: 20px;
+  max-width: 550px;
 }
 
 .description-wrapper p {

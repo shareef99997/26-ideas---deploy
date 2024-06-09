@@ -6,12 +6,13 @@ import OFFERS_EN from './Offers-en/Offers-en';
 import ABOUT_EN from './About-en/About-en';
 import FOOTER_EN from '../Home-en/Footer-en/Footer-en';
 import CONTACT_EN from '../Home-en/Contact-en/Contact-en';
+import LoadingScreen from '../../LoadingScreen/LoadingScreen';
 
 
 function Home() {
   return (
     <div className="Home" lang="en">
-      
+      <LoadingScreen/>
       <HEADER_EN />
       <ABOUT_EN />
       <SERVICES_EN />
