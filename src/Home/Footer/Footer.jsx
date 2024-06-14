@@ -23,6 +23,8 @@ function Footer() {
             <li className="question" >    في خدمتكم للجواب على جميع استفسراتكم  </li>
             <li className="email">it@26ideas.sa</li>
               <li className="phone" >00966566664530</li>
+              <li className="phone" >00966566662570</li>
+              <li className="phone" >0966547995411</li>
               <li className="location" >المملكة العربية السعودية - الرياض</li>
 
             </ul>

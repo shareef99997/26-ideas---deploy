@@ -165,7 +165,16 @@ function Contact_us_en() {
                   <FontAwesomeIcon icon={faEnvelope} /><span> it@26ideas.sa</span>
                 </li>
                 <li className="phone">
-                  <FontAwesomeIcon icon={faPhoneAlt} /><span> +966566664530</span>
+                  <FontAwesomeIcon icon={faPhoneAlt} /><span> 00966566664530</span>
+                </li>
+                <li className="phone" >
+                  <FontAwesomeIcon icon={faPhoneAlt} /><span>  00966547995411</span>
+                </li>
+                <li className="phone" >
+                  <FontAwesomeIcon icon={faPhoneAlt} /><span> 00966566664530</span>
+                </li>
+                <li className="phone" >
+                  <FontAwesomeIcon icon={faPhoneAlt} /><span> 00966566662570</span>
                 </li>
                 <li className="location">
                   <FontAwesomeIcon icon={faMapMarkerAlt} /><span> Saudi Arabia - Riyadh </span>

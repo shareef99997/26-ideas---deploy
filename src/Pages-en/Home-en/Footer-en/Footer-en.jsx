@@ -22,6 +22,8 @@ function Footer_en() {
               <li className="question">We are here to answer all your inquiries</li>
               <li className="email">it@26ideas.sa</li>
               <li className="phone">00966566664530</li>
+              <li className="phone" >00966566662570</li>
+              <li className="phone" >0966547995411</li>
               <li className="location">Saudi Arabia - Riyadh</li>
             </ul>
           </div>
