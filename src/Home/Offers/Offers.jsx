@@ -56,7 +56,7 @@ function Offers() {
                 navigation
                 loop={true}
                 autoplay={{
-                  delay: 2500, // 3 seconds delay between slides
+                  delay: 6500, // 3 seconds delay between slides
                   disableOnInteraction: false,
                 }}
                 modules={[Autoplay, Navigation, Pagination, Scrollbar]} // Include required modules

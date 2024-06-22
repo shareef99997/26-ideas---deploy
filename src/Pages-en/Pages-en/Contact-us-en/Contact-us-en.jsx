@@ -167,9 +167,7 @@ function Contact_us_en() {
                 <li className="phone">
                   <FontAwesomeIcon icon={faPhoneAlt} /><span> 00966566664530</span>
                 </li>
-                <li className="phone" >
-                  <FontAwesomeIcon icon={faPhoneAlt} /><span>  00966547995411</span>
-                </li>
+               
                 <li className="phone" >
                   <FontAwesomeIcon icon={faPhoneAlt} /><span> 00966566664530</span>
                 </li>
