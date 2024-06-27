@@ -89,7 +89,7 @@ function Footer() {
               <li><a className='link' href="/" >الرئيسية</a> </li>
               <li> <a className='link' href="/about-us" >من نحن</a></li>
               <li> <a className='link' href="/services" >خدماتنا</a> </li>
-              <li><a href="http://www.nextech-sa.com" target="_blank" rel="noopener noreferrer" className='link' >متجرنا</a></li>
+              <li><a href="https://store.26ideas.sa/?lang=ar" target="_blank" rel="noopener noreferrer" className='link' >منتجاتنا</a></li>
               <li> <a className='link' href="/join-us" >انضم الينا</a> </li>
               <li> <a className='link' href="/blog" >المدونة</a> </li>
               <li> <a className='link' href="/contact-us" > تواصل معنا </a> </li>

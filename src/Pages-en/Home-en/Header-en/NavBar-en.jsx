@@ -45,7 +45,7 @@ function NavBar_en({ currentPage }) {
           </li>
           {/* Update anchor tag with valid URL or replace it with a button */}
           <li className={`${currentPage === 'store' ? 'active' : ''}`}>
-            <a href="http://www.nextech-sa.com"  rel="noreferrer" target="_blank">Store</a>
+            <a href="https://store.26ideas.sa/en/?lang=en"  rel="noreferrer" target="_blank">Products</a>
           </li>
           <li className={`${currentPage === 'join-us' ? 'active' : ''}`}>
             <a href="/en/join-us">Join Us</a>

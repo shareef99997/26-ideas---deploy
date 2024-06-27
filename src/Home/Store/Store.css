@@ -1,0 +1,167 @@
+.Store {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--main-gradient);
+}
+
+.Store-Title {
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  padding: 20px 0;
+  color: white;
+}
+
+.Store-Title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 2px;
+  background: white;
+}
+
+.Store-Description {
+  color: #fefefe;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.BButton-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Learn-More-Button-Store {
+  background: white;
+  color: var(--main-color);
+}
+
+.Product-Slider {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  width: 90%;
+  padding-bottom: 100px;
+}
+
+.swiper-pagination-bullet {
+  background: #ddd; 
+  opacity: 1; 
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff15; /* Color for the active bullet */
+}
+
+.Product-Box {
+  background: #f4f4f4;
+  padding: 10px 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 50%;
+}
+
+.Product-Image-Wrapper {
+  width: 100%;
+  padding-top: 75%; /* Aspect ratio of 4:3 */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.Product-Image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.Product-Description {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Product-Description h3 {
+  font-size: 1.0em;
+  margin-bottom: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Product-Description p {
+  font-size: 0.8em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.Product-Description h4{
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+.buy-button {
+  padding: 8px 30px;
+  font-size: 13px;
+  color: var(--main-color);
+  border: solid var(--main-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease 0.3s;
+  font-weight: 300;
+  width: 90%;
+  background: white;
+}
+
+.buy-button:hover {
+  background: var(--main-gradient);
+  color: white;
+  border: solid var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .Store-Title::after {
+    width: 100px;
+  }
+
+  .Product-Description h3 {
+    font-size: 11px;
+  }
+
+  .Product-Description p {
+    font-size: 7px;
+  }
+
+  .Product-Description h4 {
+    font-size: 8px;
+  }
+
+  .buy-button {
+    padding: 2px 11px;
+    font-size: 8px;
+  }
+
+  .Learn-More-Button-Store {
+    font-size: 0.8rem;
+  }
+
+  .Product-Slider {
+    padding: 20px;
+    width: 90%;
+    padding-bottom: 100px;
+  }
+}

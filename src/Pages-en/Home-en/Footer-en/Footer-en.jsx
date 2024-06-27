@@ -86,7 +86,7 @@ function Footer_en() {
             <ul>
               <li><a className='link' href="/en/">Home</a></li>
               <li><a className='link' href="/en/about-us">About Us</a></li>
-              <li><a href="http://www.nextech-sa.com" target="_blank" rel="noopener noreferrer" className='link'>Our Store</a></li>
+              <li><a href="https://store.26ideas.sa/en" target="_blank" rel="noopener noreferrer" className='link'>Products</a></li>
               <li><a className='link' href="/en/join-us">Join Us</a></li>
               <li><a className='link' href="/en/blog">Blog</a></li>
               <li><a className='link' href="/en/contact-us">Contact Us</a></li>
