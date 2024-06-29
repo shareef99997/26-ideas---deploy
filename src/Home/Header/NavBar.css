@@ -45,7 +45,7 @@ nav.scrolled {
 }
 
 .nav-menu li a {
-  font-size: 19px;
+  font-size: 16px;
   color: white;
   cursor: pointer;
 }
@@ -94,18 +94,19 @@ nav.scrolled .Contact-btn {
 
 .cbl{
   display: none;
+  font-size: 16px;
 }
 
 .Cont{
-
   padding-left: 20px;
-  
+  font-size: 16px;
 }
 
-#Contact-btn{
+.Contact-btn{
   background-color: white;
   color: white;
   padding: 7px 20px;
+  font-size: 14px;
 }
 
 .logo {
@@ -113,7 +114,7 @@ nav.scrolled .Contact-btn {
   text-align: center;
   transition: ease-in-out 0.3s;
   padding-top: 10px;
-  width: 150px;
+  width: 140px;
   margin-left: 50px;
 }
 
@@ -137,7 +138,7 @@ nav.scrolled .Contact-btn {
 .en {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   background: transparent;
@@ -146,7 +147,7 @@ nav.scrolled .Contact-btn {
 
 .en::before{
   content: '▼'; /* Unicode character for a downward arrow */
-  font-size: 12px;
+  font-size: 10px;
   margin-left: 8px;
   transition: transform 0.3s ease-in-out;
 }
@@ -189,15 +190,7 @@ nav.scrolled .Contact-btn {
 
 /* Responsive styles */
 
-
-@media (max-width: 1062px) {
-  .Contact-btn{
-    font-size: 10px;
-    font-size:13px ;
-  }
-}
-
-@media (max-width: 920px) {
+@media (max-width: 1160px) {
   .nav-content {
     display: flex;
     justify-content: space-between;

@@ -57,7 +57,7 @@ function NavBar({ currentPage }) {
         </ul>
         <div className="Cont">
           <a href="/contact-us">
-            <button className="Contact-btn" id='Contact-btn'> اطلب عرض سعر  </button>
+            <button className="Contact-btn" > اطلب عرض سعر  </button>
           </a>
         </div>
         <div className="lang">

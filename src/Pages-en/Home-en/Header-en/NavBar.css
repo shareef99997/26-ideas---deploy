@@ -18,7 +18,7 @@
 
 #lang .en::after{
   content: '▼'; /* Unicode character for a downward arrow */
-  font-size: 12px;
+  font-size: 10px;
   margin-left: 8px;
   transition: transform 0.3s ease-in-out;
 }
@@ -64,13 +64,15 @@ nav.scrolled .nav-menu li a{
   color: var(--main-color); /* Color when scrolled */
 }
 
-.Contact-btn{
+#Contact-btn{
   background-color: white;
   color: white;
-  
+  padding: 11px 20px;
+  font-size: 15px;
 }
 
-@media (max-width: 920px) {
+
+@media (max-width: 1160px) {
   #lang {
     margin-left: 0;
     

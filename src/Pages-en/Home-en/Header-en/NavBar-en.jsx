@@ -63,7 +63,7 @@ function NavBar_en({ currentPage }) {
         <div className="Cont">
           {/* Replace anchor tag with button if it doesn't navigate anywhere */}
           <a href="/en/contact-us">
-            <button className="Contact-btn">Request a Quote</button>
+            <button className="Contact-btn" id='Contact-btn'>Request a Quote</button>
           </a>
         </div>
         <div className="lang" id='lang'>
