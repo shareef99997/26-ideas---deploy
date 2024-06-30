@@ -16,13 +16,12 @@ function Home() {
 
   // Google analytics
   useEffect(() => {
-    // Create the script element for gtag.js
+    // Google Analytics
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
     gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7FGQSVRQH8';
     document.head.appendChild(gtagScript);
 
-    // Add the gtag function
     const gtagInnerScript = document.createElement('script');
     gtagInnerScript.innerHTML = `
       window.dataLayer = window.dataLayer || [];
@@ -32,13 +31,12 @@ function Home() {
     `;
     document.head.appendChild(gtagInnerScript);
 
-    // Create the script element for Snap Pixel
+    // Snap Pixel
     const snapScript = document.createElement('script');
     snapScript.async = true;
     snapScript.src = 'https://sc-static.net/scevent.min.js';
     document.head.appendChild(snapScript);
 
-    // Add the snap pixel function
     const snapInnerScript = document.createElement('script');
     snapInnerScript.innerHTML = `
       (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
@@ -56,12 +54,36 @@ function Home() {
     `;
     document.head.appendChild(snapInnerScript);
 
+    // Meta Pixel
+    const metaScript = document.createElement('script');
+    metaScript.innerHTML = `
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1887902844969030');
+      fbq('track', 'PageView');
+    `;
+    document.head.appendChild(metaScript);
+
+    // noscript part of Meta Pixel
+    const noscriptImg = document.createElement('noscript');
+    noscriptImg.innerHTML = `<img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1887902844969030&ev=PageView&noscript=1" />`;
+    document.body.appendChild(noscriptImg);
+
     // Cleanup the scripts when the component unmounts
     return () => {
       document.head.removeChild(gtagScript);
       document.head.removeChild(gtagInnerScript);
       document.head.removeChild(snapScript);
       document.head.removeChild(snapInnerScript);
+      document.head.removeChild(metaScript);
+      document.body.removeChild(noscriptImg);
     };
   }, []);
 
