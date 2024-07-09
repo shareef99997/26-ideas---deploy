@@ -113,7 +113,7 @@ nav.scrolled .Contact-btn {
 
   text-align: center;
   transition: ease-in-out 0.3s;
-  padding-top: 10px;
+  padding-top: 5px;
   width: 140px;
   margin-left: 50px;
 }
@@ -127,7 +127,7 @@ nav.scrolled .Contact-btn {
 }
 
 .logo.scrolled-logo img {
-  width: 80%; 
+  width: 60%; 
 }
 
 .lang {
@@ -219,6 +219,10 @@ nav.scrolled .Contact-btn {
   .nav-menu li a {
     font-size: 16px;
   }
+
+  nav.scrolled .nav-menu li a{
+  color: white; /* Color when scrolled */
+}
 
   .Contact-btn {
     font-size: 11px;

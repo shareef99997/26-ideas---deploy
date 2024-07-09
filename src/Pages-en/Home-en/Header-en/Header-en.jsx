@@ -1,11 +1,9 @@
-import React, { useState, } from 'react';
+import React from 'react';
 import './Header.css';
 import NAVBAR_EN from './NavBar-en';
-import { ReactTyped } from 'react-typed';
+
 
 function Header_en() {
-  const [showDescription, setShowDescription] = useState(false);
-
 
   return (
     <header className="Home-Header" id="Header" >
@@ -17,26 +15,10 @@ function Header_en() {
       <NAVBAR_EN currentPage="home"/>
       <div className="Header-Body">
         <div className="home-content">
-          <h1><ReactTyped
-            strings={['Your first step towards your digital future']}
-            typeSpeed={10}
-            onComplete={() => setShowDescription(true)}
-            startDelay={3300}
-          /></h1>
+          <h1>Your first step towards your digital future</h1>
           <p>
-          {showDescription && (
-            
-              <ReactTyped
-              strings={[
-                'We are here to provide you with the best modern technical solutions. Whether you are looking for software development, e-commerce, or technical consulting, we are here to serve you.',
-              ]}
-              typeSpeed={5}
-              startDelay={400} // Small delay before starting the paragraph typing
-              />
-            
-            
-          )}</p>
-          <a href="#About"><button >  Take your step now </button></a>
+          We are here to provide you with the best modern technical solutions. Whether you are looking for software development, e-commerce, or technical consulting, we are here to serve you.</p>
+          <a href="/en/contact-us"><button >  Take your step now </button></a>
         </div>
       </div>
     </header>

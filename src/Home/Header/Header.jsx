@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css';
 import NavBar from './NavBar';
-import { ReactTyped } from 'react-typed';
 
 function Header() {
-  const [showDescription, setShowDescription] = useState(false);
 
 
   return (
@@ -17,26 +15,10 @@ function Header() {
       <NavBar currentPage="home"/>
       <div className="Header-Body">
         <div className="home-content">
-          <h1><ReactTyped
-            strings={['خطوتك الأولى نحو مستقبلك الرقمي']}
-            typeSpeed={10}
-            onComplete={() => setShowDescription(true)}
-            startDelay={3300}
-          /></h1>
-          <p>
-          {showDescription && (
-            
-              <ReactTyped
-              strings={[
-                ' اكتشف الابتكار الذي لا حدود له مع حلولنا التقنية المتقدمة، حيث نجمع بين خبراتنا العميقة في تطوير البرمجيات وأحدث تقنيات الذكاء الاصطناعي لتقديم تجربة فريدة في التجارة الإلكترونية والاستشارات.',
-              ]}
-              typeSpeed={3}
-              startDelay={400} // Small delay before starting the paragraph typing
-              />
-            
-            
-          )}</p>
-          <a href="#About"><button >إتخذ خطوتك الآن</button></a>
+          <h1>خطوتك الأولى نحو مستقبلك الرقمي</h1>
+          <p> اكتشف الابتكار الذي لا حدود له مع حلولنا التقنية المتقدمة، حيث نجمع بين خبراتنا العميقة في تطوير البرمجيات وأحدث تقنيات الذكاء الاصطناعي لتقديم تجربة فريدة في التجارة الإلكترونية والاستشارات.</p>
+
+          <a href="/contact-us"><button >إتخذ خطوتك الآن</button></a>
         </div>
       </div>
     </header>

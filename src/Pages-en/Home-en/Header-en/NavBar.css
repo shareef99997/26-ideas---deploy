@@ -59,8 +59,7 @@
   opacity: 0.5;
 }
 
-nav.scrolled #lang a,
-nav.scrolled .nav-menu li a{
+nav.scrolled #lang a{
   color: var(--main-color); /* Color when scrolled */
 }
 
