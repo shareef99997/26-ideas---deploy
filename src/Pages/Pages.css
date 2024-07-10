@@ -2,30 +2,30 @@
   position: relative;
   padding: 0;
   margin: 0;
-  height: 50vh;
+  height: 30%;
   overflow: hidden;
-
-  background-size: cover;
+  background: rgb(0, 0, 0);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
   transition: 0.5s ease;
 }
 
-.Page-Header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.667);
-  z-index: 0;
+.page-header-spacer{
+  padding-top: 100px;
+}
+
+.Page-Title-Wrapper{
+  display: flex;
+  overflow: hidden;
+  background: rgb(36, 45, 45);
+  border-radius: 30px   30px 0 0;
 }
 
 .Page-Title {
   color: var(--main-color);
-  font-size: 40px;
+  font-size: 30px;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -36,20 +36,20 @@
 }
 
 .Page-Title::after{
-  margin-left: 500px;
-  margin-right: 20px;
+  margin-left: 300px;
+  margin-right: 15px;
 }
 
 .Page-Title::before{
-  margin-left: 20px;
-  margin-right: 500px;
+  margin-left: 15px;
+  margin-right: 300px;
 }
 
 .Page-Title::before,
 .Page-Title::after {
   content: "";
   flex: 1;
-  border-bottom: 5px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
  
 }
 
@@ -57,10 +57,21 @@
   background-color: rgb(231, 231, 231);
 }
 
+.Page-Title-en::before{
+  margin-left: 500px;
+  margin-right: 20px;
+}
+
+.Page-Title-en::after{
+  margin-left: 20px;
+  margin-right: 500px;
+}
+
+
 @media (max-width: 800px) {
-  .Page-Header {
-    height: 30vh;
-  }
+  /* .Page-Header {
+    height: 20vh;
+  } */
   .Page-Title {
     font-size: 1.5rem;
   }

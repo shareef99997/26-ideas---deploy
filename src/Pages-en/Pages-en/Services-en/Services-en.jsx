@@ -102,9 +102,10 @@ function Services_en() {
   return (
     <div className="Services-page " id="Services-page" lang="en">
 
-        <div className="Services-Header Page-Header-en">
         <NavBar currentPage="services"/>
-          <h3 className="Page-Title-en"> Our Services </h3>
+        <div className="Services-Header Page-Header Page-Header-en">
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title Page-Title-en"> Our Services </h2></div>
         </div>
       
         {/* Page Body */}
@@ -266,7 +267,6 @@ function Services_en() {
                   </div>
                 </a>
               </div>
-              {/* New Services */}
               <div className="Service-Box fade-in-element hidden">
                 <a href="/en/contact-us">
                   <div className="Service-Upper" lang="en">

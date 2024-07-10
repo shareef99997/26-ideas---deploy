@@ -57,9 +57,11 @@ function About_us() {
 
   return (
     <div className="About-us" id="About-us" lang="ar">
+      <NavBar currentPage="about-us"/>
       <div className="About-us-Header Page-Header">
-        <NavBar currentPage="about-us"/>
-        <h3 className="Page-Title">  من نحن  </h3>
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title">  من نحن  </h2></div>
+        
       </div>
 
       <div className="About-us-Body Page-Body">

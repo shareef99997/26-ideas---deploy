@@ -112,9 +112,10 @@ function Blog() {
         <meta name="description" content="اكتشف مقالات حول تطوير البرمجيات وتحسين تصنيفها على الإنترنت باستخدام استراتيجيات متقدمة ومفاتيح البحث الحديثة." />
         <meta name="keywords" content="تطوير البرمجيات, تحسين محركات البحث, SEO, SEM, تجربة المستخدم, البرمجة النظيفة, الذكاء الاصطناعي, تعلم الآلة, التسويق الرقمي" />
       </Helmet>
-      <header className="Blog-Header Page-Header">
         <NavBar currentPage={'blog'} />
-        <h2 className="Page-Title"> المدونة </h2>
+      <header className="Blog-Header Page-Header">
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title"> المدونة </h2></div>
       </header>
       
       <main className="Blog-Body">

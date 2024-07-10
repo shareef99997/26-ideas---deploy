@@ -33,7 +33,7 @@ function Header() {
   const slides = [
     {
       img: require('../../Assets/Pages-images/Services.jpg'),
-      service_img: require('../../Assets/Images/AI.png'),
+      service_img: require('../../Assets/Images/anime.gif'),
       service: " تطوير المواقع "
     },
     {
@@ -48,7 +48,7 @@ function Header() {
     },
     {
       img: require('../../Assets/Pages-images/join-us.jpg'),
-      service_img: require('../../Assets/Images/market.png'),
+      service_img: require('../../Assets/Images/marketing-gif.gif'),
       service: "التسويق الإلكتروني"
     }
   ];
@@ -58,10 +58,10 @@ function Header() {
   const handleSlideChange = () => {
     const activeSlide = swiperRef.current.swiper.slides[swiperRef.current.swiper.activeIndex];
     const overlay = activeSlide.querySelector('.overlay');
-    overlay.style.backgroundColor = 'rgba(0, 45, 56, 0.825)'; 
+    overlay.style.backgroundColor = 'rgba(0, 31, 56, 0.825)'; 
     overlay.style.opacity = '0'; 
     setTimeout(() => {
-      overlay.style.opacity = '1'; 
+      overlay.style.opacity = '0.7'; 
     }, 500);
 
 
@@ -106,7 +106,7 @@ function Header() {
                 <div className='overlay'></div>
                 <img className="Header-pic" src={slide.img} alt={`Header  ${index + 1}`} />
                 <h2 className="slide-service slide-in">{slide.service}</h2>
-                <img className="service-img slide-in" src={slide.service_img}/>
+                <img className="service-img slide-in" src={slide.service_img} alt={`Service  ${index + 1}`}/>
                 
               </div>
             </SwiperSlide>

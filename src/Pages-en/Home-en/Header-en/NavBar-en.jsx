@@ -56,14 +56,14 @@ function NavBar_en({ currentPage }) {
           {/* Replace anchor tag with button if it doesn't navigate anywhere */}
           <li className={`cbl ${currentPage === 'contact-us' ? 'active' : ''}`}>
             <a href="/en/contact-us">
-              <button className="Contact-btn">Request a Quote</button>
+              <button className="Contact-btn">Contact Us</button>
             </a>
           </li>
         </ul>
         <div className="Cont">
           {/* Replace anchor tag with button if it doesn't navigate anywhere */}
           <a href="/en/contact-us">
-            <button className="Contact-btn" id='Contact-btn'>Request a Quote</button>
+            <button className="Contact-btn" id='Contact-btn'>Contact Us</button>
           </a>
         </div>
         <div className="lang" id='lang'>

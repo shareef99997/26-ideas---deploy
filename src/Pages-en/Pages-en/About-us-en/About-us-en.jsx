@@ -62,9 +62,10 @@ function About_us_en() {
 
   return (
     <div className="About-us" id="About-us" lang="en">
-      <div className="About-us-Header Page-Header-en ">
+      <div className="About-us-Header Page-Header Page-Header-en ">
         <NavBar currentPage="about-us"/>
-        <h3 className="Page-Title-en">About Us</h3>
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title Page-Title-en">About Us</h2></div>
       </div>
 
       <div className="About-us-Body Page-Body-en">

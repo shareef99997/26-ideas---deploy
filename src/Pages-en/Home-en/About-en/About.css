@@ -1,34 +1,3 @@
-.About-Body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  position: relative; /* Add relative positioning */
-  overflow: hidden; /* Ensure no overflow issues */
-  
-}
-
-.About-img-Wrapper {
-  padding-top: 20px;
-  max-width: 200px;
-  align-self: center;
-  display: none;
-}
-
-.About-img-Wrapper img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-.About-content {
-  margin-top: 2%;
-  display: flex;
-  justify-content: space-between; 
-  flex-direction: row;
-  padding: 0 50px; 
-  gap: 100px;
-}
 
 .left-section-en,
 .right-section-en {
@@ -73,41 +42,9 @@
   
 }
 
-.swiper-slide img {
-  border-radius: 10px;
-  width: 100%; 
-  transition: 0.3s ease;
-}
 
-/* Swiper */
-
-/* Swiper Navigation Buttons */
-.swiper-button-next,
-.swiper-button-prev {
-
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
-  
-  border-radius: 50%; /* Rounded buttons */
-  padding: 0 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 18px !important; /* Adjust this value to change the arrow size */
-  color: #000; /* Change to your desired color */
-  width: 18px; /* Width of the buttons */
-  height: 18px; /* Height of the buttons */
-  text-align: center;
-  
-}
 
 @media (max-width: 1336px) {
-  .About-content {
-    gap: 110px;
-  }
   .left-section-en{
     max-width: 400px;
   }
@@ -120,16 +57,6 @@
     font-size: 40px;
   }
   .right-section-en p {
-    
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    display: none;
     
   }
 }
@@ -177,17 +104,6 @@
 
 @media (max-width: 800px) {
 
-  .About-content {
-    flex-direction: column-reverse;
-    padding: 0 20px;
-    align-items: center; 
-    gap: 50px;
-  }
-  .About-img-Wrapper {
-    padding-top: 20px;
-    max-width: 150px;
-  }
-
   .left-section-en{
     max-width:280px ;
     order: 1;
@@ -218,13 +134,6 @@
 }
 
 @media (max-width: 460px) {
-  .Header-Body {
-    
-  }
-  .About-content {
-    padding: 0 20px;
-    gap: 0;
-  }
 
   .left-section-en{
     max-width:280px ;
@@ -247,25 +156,12 @@
     
   }
 
-  .button-container {
-    justify-content: center;
-  }
-
   .right-section-en button {
     font-size: 12px;
   }
 }
 
 
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  transform: rotateX(180deg);
-  z-index: 0; /* Ensure the wave is behind the content */
-}
 
 /* Add these animations to your About.css */
 

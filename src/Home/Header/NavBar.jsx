@@ -51,13 +51,13 @@ function NavBar({ currentPage }) {
           </li>
           <li className={`cbl ${currentPage === 'contact-us' ? 'active' : ''}`}>
             <a href="/contact-us">
-              <button className="Contact-btn" > اطلب عرض سعر </button>
+              <button className="Contact-btn" > تواصل معنا </button>
             </a>
           </li>
         </ul>
         <div className="Cont">
           <a href="/contact-us">
-            <button className="Contact-btn" > اطلب عرض سعر  </button>
+            <button className="Contact-btn" > تواصل معنا  </button>
           </a>
         </div>
         <div className="lang">

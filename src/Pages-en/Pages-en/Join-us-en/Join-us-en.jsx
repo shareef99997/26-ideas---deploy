@@ -49,9 +49,10 @@ function Join_us_en() {
 
   return (
     <div className="Join-us" id="Join-us" lang="en">
-      <div className="Join-us-Header Page-Header-en">
         <NavBar currentPage="join-us" />
-        <h2 className="Page-Title-en">Join Us</h2>
+      <div className="Join-us-Header Page-Header Page-Header-en">
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title Page-Title-en">Join Us</h2></div>
       </div>
 
       {/* Page Body */}

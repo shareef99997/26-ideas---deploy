@@ -141,9 +141,10 @@ const handleSubmit = (e) => {
 
   return (
     <div className="Contact-us" id="Contact-us" lang="ar">
+      <NavBar currentPage="contact-us" />
       <div className="Contact-us-Header Page-Header">
-        <NavBar currentPage="contact-us" />
-        <h2 className="Page-Title">تواصل معنا</h2>
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title">تواصل معنا</h2></div>
       </div>
       
       {/* Page Body */}

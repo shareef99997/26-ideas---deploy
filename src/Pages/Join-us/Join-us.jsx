@@ -61,9 +61,10 @@ function Join_us() {
 
   return (
     <div className="Join-us" id="Join-us" lang="ar">
+      <NavBar currentPage="join-us" />
       <div className="Join-us-Header Page-Header">
-        <NavBar currentPage="join-us" />
-        <h2 className="Page-Title">إنضم إلينا</h2>
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title">إنضم إلينا</h2></div>
       </div>
 
       {/* Page Body */}

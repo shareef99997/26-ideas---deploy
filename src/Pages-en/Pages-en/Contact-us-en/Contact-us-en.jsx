@@ -140,9 +140,10 @@ function Contact_us_en() {
 
   return (
     <div className="Contact-us" id="Contact-us" lang="en">
-      <div className="Contact-us-Header Page-Header-en">
         <NavBar currentPage="contact-us" />
-        <h2 className="Page-Title-en">Contact Us</h2>
+      <div className="Contact-us-Header Page-Header Page-Header-en">
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title Page-Title-en">Contact Us</h2></div>
       </div>
 
       {/* Page Body */}

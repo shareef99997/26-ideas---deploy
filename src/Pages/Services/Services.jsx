@@ -102,9 +102,10 @@ function Services() {
   return (
     <div className="Services-page " id="Services-page" lang="ar">
 
-        <div className="Services-Header Page-Header">
         <NavBar currentPage="services"/>
-          <h3 className="Page-Title"> خدماتنا </h3>
+        <div className="Services-Header Page-Header">
+          <div className='page-header-spacer'></div>
+          <div className="Page-Title-Wrapper"><h2 className="Page-Title"> خدماتنا </h2></div>
         </div>
       
         {/* Page Body */}

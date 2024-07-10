@@ -113,9 +113,10 @@ function Blog_en() {
         <meta name="description" content="Discover articles about software development and improving its ranking online using advanced strategies and modern search keys." />
         <meta name="keywords" content="software development, SEO, SEM, user experience, clean coding, AI, machine learning, digital marketing" />
       </Helmet>
-      <header className="Blog-Header Page-Header-en">
         <NavBar currentPage={'blog'} />
-        <h2 className="Page-Title-en">Blog</h2>
+      <header className="Blog-Header Page-Header Page-Header-en">
+        <div className='page-header-spacer'></div>
+        <div className="Page-Title-Wrapper"><h2 className="Page-Title Page-Title-en">Blog</h2></div>
       </header>
       
       <main className="Blog-Body-en">
