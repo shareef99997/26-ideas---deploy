@@ -2,22 +2,127 @@
   position: relative;
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   overflow: hidden; 
-  background-color: rgba(0, 0, 0, 0.475);
   transition: 1s ease;
 }
 
-.header-video {
+
+
+
+/*////////////// Slider //////////////*/
+.img-slider {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the video covers the entire header */
-  z-index: 0; /* Place the video behind other content */
-  /* display: none; */
+  z-index: -2; /* Place the slider behind other content */
 }
+
+.swiper {
+  width: 100%;
+  height: 100%; /* Ensure the Swiper component takes the full height */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Ensure the slide takes the full height */
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.Header-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire slider */
+  object-position: center; /* Center the image */
+  z-index: 0; /* Ensure the image is below the overlay */
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInRight {
+  0% { opacity: 1; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 1; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInFromTop {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInFromBottom {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(30%); }
+}
+
+.slide-service {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.764);
+  padding: 15px 0;
+  opacity: 0; /* Initial state */
+  transform: translateX(100%); /* Initial state */
+  border-right: solid 2px rgb(103, 103, 103);
+  border-top: solid 2px rgb(103, 103, 103);
+  border-left: solid 2px rgb(103, 103, 103);
+  text-align: center;
+}
+
+
+
+.slide-service.slide-in {
+  animation: fadeInFromBottom 0.8s ease-in-out forwards;
+}
+
+.service-img {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  transform: translateX(-100%); 
+  z-index: 2;
+  opacity: 0; 
+  max-width: 25%;
+}
+
+.service-img.slide-in {
+  animation: slideInLeft 0.8s ease-in-out forwards;
+}
+
+
+.service-img-en {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  transform: translateX(100%); 
+  z-index: 2;
+  opacity: 0; 
+  max-width: 25%;
+}
+
+.service-img-en.slide-in {
+  animation: slideInRight 0.8s ease-in-out forwards;
+}
+
 
 .overlay {
   position: absolute;
@@ -25,83 +130,144 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.555); /* Semi-transparent black overlay */
-  z-index: 1; /* Ensure the overlay is on top of the video */
+  opacity: 1;
+  background-color: rgba(0, 45, 56, 0.825);
+  z-index: 1; 
+}
+
+
+
+/*////////////// Header content //////////////*/
+
+.nav-space {
+  padding:100px 0;
 }
 
 .Header-Body {
   position: relative;
   z-index: 2; /* Ensure Header-Body content is on top of the video and overlay */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100%; /* Ensure Header-Body takes full height */
-  text-align: center; /* Center text within home-content */
+  text-align: center; /* Center text within hero-first-section */
+  padding: 50px 70px;
 }
 
-.home-content {
-  padding-top: 200px;
-  color: white; /* Make text white for visibility */
+.hero-first-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem; /* Add space between the elements */
-  max-width: 80%; /* Limit width for better readability */
-  margin: 0 auto; /* Center horizontally */
+  align-items: start;
+  text-align: start;
+  justify-content: start;
+  max-width: 80%;  
+  gap: 30px;
 }
 
-.home-content h1 {
-  font-size: 3rem; /* Responsive font size */
+.hero-first-section h1 {
+  font-size: 2.8rem; /* Responsive font size */
   margin: 0;
-  color: var(--main-color);
+  color: white;
   transition: 1s ease-in-out;
+  font-weight: 600;
+
 }
 
-.home-content p {
+.hero-first-section p {
   font-size: 1.1rem; /* Responsive font size */
   margin: 0;
-  max-width: 600px; /* Limit paragraph width for better readability */
+  max-width: 550px; /* Limit paragraph width for better readability */
   opacity: 0.8;
   transition: 1s ease-in-out;
+  color: white;
 }
 
-.home-content button {
+.hero-first-section button {
   border: none;
   color: white;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top:20px ;
 }
 
-@media (max-width: 768px) {
-  .home-content h1 {
+
+
+@media (max-width: 968px) {
+
+  .hero-first-section h1 {
     font-size: 2rem;
   }
 
-  .home-content p {
+  .hero-first-section p {
     font-size: 1rem;
   }
 
-  .home-content button {
+  .hero-first-section button {
     
     font-size: 0.9rem;
   }
+
+  .Header-Body {
+    gap: 10px;
+  }
+
+  .service-img {
+    display: none;
+  }
+
 }
 
-@media (max-width: 480px) {
-  .home-content {
-    padding-top: 0px;
+@media (max-width: 677px) {
+
+  .Header-Body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+    padding-top: 50px;
   }
-  .home-content h1 {
+
+  .hero-first-section {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 80%;  
+    gap: 30px;
+  }
+
+  .hero-first-section h1 {
     font-size: 1.5rem;
   }
 
-  .home-content p {
+  .hero-first-section p {
     font-size: 0.7rem;
   }
 
-  .home-content button {
+  .hero-first-section button {
     
     font-size: 0.7rem;
   }
+
+  .slide-service {
+    font-size: 1.0rem;
+    padding: 10px 0;
+  }
+}
+
+/* Initial state for sliding elements */
+.hero-first-section .animate {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Active state for sliding elements */
+.hero-first-section .animate.active {
+  opacity: 1;
+  transform: translateX(0);
 }

@@ -1,33 +1,9 @@
 .About-us-Header {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
   background: url('../../../Assets/Pages-images/about-us.jpg');
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s ease;
 }
 
-.About-us-Body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 50px 0;
-}
 
-.About-us-content {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px 0;
-  gap: 50px;
-}
+
 
 .left-section-en,
 .right-section-en {
@@ -41,11 +17,6 @@
 
 }
 
-.A-one img{
-  width: 100%;
-  border-radius: 15px;
-  
-}
 
 .right-section-en h1,
 .right-section-en p,
@@ -71,25 +42,6 @@
 
 }
 
-
-.description-wrapper {
-  margin-bottom: 20px;
-}
-
-.description-wrapper p {
-  display: inline;
-  font-size: 15px;
-}
-
-.description-wrapper .col {
-  unicode-bidi: isolate; /* Prevent number from being reordered */
-  margin-left: 8px; /* Add spacing if needed */
-}
-
-/* Dropdown Styles */
-.About-us-description {
-  margin-top: 5px;
-}
 
 .dropdown-title-en {
   position: relative;
@@ -118,18 +70,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* .dropdown-title:hover .dropdown-title-h3::before {
-  transform: rotate(180deg); 
-} */
 
-.dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
-  border-radius: 5px;
-  opacity: 0;
-  font-size: 15px;
-}
 
 .dropdown-title-en:hover .dropdown-content {
   max-height: 100px; /* Adjust as needed */
@@ -142,19 +83,6 @@
 /* Responsive styles */
 @media (max-width: 800px) {
 
-  .Page-Title{
-    font-size: 1.5rem;
-  }
-  
-  .About-us-section{
-
-  }
-
-  .About-us-content {
-    flex-direction: column-reverse;
-    
-    align-items: center;
-  }
 
   .left-section-en img,
   .right-section-en img {
@@ -165,15 +93,6 @@
   .left-section-en h1,
   .right-section-en h1{
     font-size: 25px;
-  }
-
-  .description-wrapper p {
-    display: inline;
-    font-size: 12px;
-  }
-
-  .dropdown-content {
-    font-size: 11px;
   }
 
   .dropdown-title-en h3 {
@@ -203,37 +122,3 @@
   }
 }
 
-
-.hidden {
-  opacity: 0;
-}
-
-@keyframes fadeInFromLeft {
-  from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    
-    @keyframes fadeInFromRight {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    
-    .fade-in-left {
-      animation: fadeInFromLeft 1s forwards;
-    }
-    
-    .fade-in-right {
-      animation: fadeInFromRight 1s forwards;
-    }

@@ -1,15 +1,5 @@
-.About-us-Header {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
+.Services-Header {
   background: url('../../Assets/Pages-images/Services.jpg');
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s ease;
 }
 
 .Services-Page-Body .Services {

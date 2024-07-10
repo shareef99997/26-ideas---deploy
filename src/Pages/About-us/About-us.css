@@ -1,10 +1,10 @@
 .About-us-Header {
+  background: url('../../Assets/Pages-images/about-us.jpg');
   position: relative;
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height:100vh;
   overflow: hidden;
-  background: url('../../Assets/Pages-images/about-us.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
