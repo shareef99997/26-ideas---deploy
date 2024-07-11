@@ -38,13 +38,13 @@ function About_us_en() {
 
       if (leftRef) {
         leftRef.classList.add('hidden');
-        leftRef.dataset.animation = index % 2 === 0 ? 'fade-in-right' : 'fade-in-left';
+        leftRef.dataset.animation = index % 2 === 0 ? 'fade-in-left' : 'fade-in-right';
         observer.observe(leftRef);
       }
 
       if (rightRef) {
         rightRef.classList.add('hidden');
-        rightRef.dataset.animation = index % 2 === 0 ? 'fade-in-left' : 'fade-in-right';
+        rightRef.dataset.animation = index % 2 === 0 ? 'fade-in-right' : 'fade-in-left';
         observer.observe(rightRef);
       }
     });

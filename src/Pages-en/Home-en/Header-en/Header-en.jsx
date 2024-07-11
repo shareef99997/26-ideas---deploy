@@ -58,7 +58,7 @@ function Header_en() {
   const handleSlideChange = () => {
     const activeSlide = swiperRef.current.swiper.slides[swiperRef.current.swiper.activeIndex];
     const overlay = activeSlide.querySelector('.overlay');
-    overlay.style.backgroundColor = 'rgba(0, 45, 56, 0.825)'; 
+    overlay.style.backgroundColor = 'rgba(0, 31, 56, 0.825)'; 
     overlay.style.opacity = '0'; 
     setTimeout(() => {
       overlay.style.opacity = '1'; 

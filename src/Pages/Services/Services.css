@@ -48,6 +48,33 @@
 
 /*/// Title Section ///*/
 
+
+/*/// About Section ///*/
+
+.Services-About-content{
+  display: flex;
+  justify-content: center;
+  
+  padding: 50px 50px;
+  gap: 50px;
+  align-self: center;
+}
+
+.Services-right-section{
+  width: 65%;
+  text-align: start;
+}
+
+.Services-left-section img{
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.167);
+}
+
+
+
+/*/// Title Section ///*/
+
 /*/// Grid Section ///*/
 
 .Markets-Grid {
@@ -183,6 +210,10 @@
   .Markets-Grid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
+  .Services-About-content{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
@@ -212,6 +243,23 @@
   }
   .List-Div li {
     font-size:13px;
+  }
+
+  .Services-About-content{
+    padding: 20px 30px;
+  }
+  .Services-right-section{
+    width: 100%;
+    
+  }
+
+  .Services-right-section h1{
+    font-size: 25px;
+  }
+
+  .Services-right-section p {
+    display: inline;
+    font-size: 12px;
   }
 }
 

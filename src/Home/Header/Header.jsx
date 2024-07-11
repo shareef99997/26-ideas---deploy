@@ -61,7 +61,7 @@ function Header() {
     overlay.style.backgroundColor = 'rgba(0, 31, 56, 0.825)'; 
     overlay.style.opacity = '0'; 
     setTimeout(() => {
-      overlay.style.opacity = '0.7'; 
+      overlay.style.opacity = '1'; 
     }, 500);
 
 
