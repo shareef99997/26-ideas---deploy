@@ -1,9 +1,29 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Services.css';
-
 
 function Services() {
   const servicesRef = useRef(null);
+  const [activeFilter, setActiveFilter] = useState('الكل');
+
+  const services = [
+    { id: 1, category: 'تطوير البرمجيات', title: 'حلول الذكاء الاصطناعي', description: 'نقدم تطبيقات مخصصة تستفيد من تقنيات الذكاء الاصطناعي مثل التعلم العميق وتحليل البيانات تطوير الروبوتات', icon: 'fas fa-robot' },
+    { id: 2, category: 'تطوير البرمجيات', title: 'تطوير المواقع الإلكترونية', description: 'نقدم تصميمًا مبتكرًا وتطويرًا للمواقع الإلكترونية وتطوير تطبيقات الهاتف المحمول', icon: 'fas fa-laptop-code' },
+    { id: 3, category: 'تطوير البرمجيات', title: 'تطوير تطبيقات الجوال', description: 'نقدم تصميمًا مبتكرًا لتطوير تطبيقات الهاتف المحمول', icon: 'fas fa-mobile-alt' },
+    { id: 4, category: 'حلول تقنية المعلومات', title: 'منتجات تقنية مبتكرة', description: 'نقدم أجهزة ذكية تتوافق مع برمجيات الذكاء الاصطناعي لخدمة العمل والمهام اليومية.', icon: 'fas fa-lightbulb' },
+    { id: 5, category: 'حلول تقنية المعلومات', title: 'الاستشارات', description: 'نساعد الشركات والأفراد على تحقيق أهدافهم التقنية ببرمجيات وأدوات حديثة', icon: 'fas fa-handshake' },
+    { id: 6, category: 'حلول تقنية المعلومات', title: 'تخطيط موارد المؤسسات (ERP)', description: 'تساعد هذه البرمجيات الشركات على تحسين عمليات البيع وتقديم تجربة سلسة للعملاء.', icon: 'fas fa-cogs' },
+    { id: 7, category: 'حلول تقنية المعلومات', title: 'برمجيات إدارة المخزون', description: 'تساعد هذه البرمجيات الشركات على تنظيم المخازن بكفاءة،', icon: 'fas fa-warehouse' },
+    { id: 8, category: 'حلول تقنية المعلومات', title: 'برمجيات إدارة المبيعات  ', description: 'تساعد هذه البرمجيات الشركات على تحسين عمليات البيع وتقديم تجربة سلسة للعملاء.', icon: 'fas fa-cash-register' },
+    { id: 9, category: 'حلول تقنية المعلومات', title: 'خدمات الحوسبة السحابية', description: 'نقدم حلول الحوسبة السحابية لتعزيز البنية التحتية لتكنولوجيا المعلومات .', icon: 'fas fa-cloud' },
+    { id: 10, category: 'حلول تقنية المعلومات', title: 'الأنظمة الأمنية', description: 'نوفر أنظمة أمنية متقدمة لحماية المؤسسات والمنازل من التهديدات والمخاطر.', icon: 'fas fa-shield-alt' },
+    { id: 11, category: 'حلول تقنية المعلومات', title: 'البنية التحتية والشبكات', description: 'نقدم خدمات تخطيط وتنفيذ البنية التحتية للشبكات لضمان تشغيل سلس واتصال دائم.', icon: 'fas fa-network-wired' },
+    { id: 12, category: 'حلول تقنية المعلومات', title: 'تحليل البيانات', description: 'نقدم خدمات تحليل البيانات لمساعدة الشركات على اتخاذ قرارات مبنية اسس موثوقة', icon: 'fas fa-chart-bar' },
+    { id: 13, category: 'التسويق', title: 'التسويق الإلكتروني', description: ' ترويج لمنتجاتك , خدماتك عبر الإنترنت بإستخدام احدث الوسائل  ', icon: 'fas fa-bullhorn' },
+    { id: 14, category: 'التسويق', title: 'دعاية و إعلان', description: 'نقدم خدمات الدعاية والإعلان لزيادة الوعي بمنتجاتك أو خدماتك وتحقيق انتشار أوسع.', icon: 'fas fa-ad' },
+    { id: 15, "category": "التسويق", "title": "إدارة مواقع الويب", "description": " خدمات إدارة مواقع الويب لضمان التشغيل السلس وتحديث المحتوى بشكل مستمر.", "icon": "fas fa-globe" },
+  ];
+
+  const filteredServices = activeFilter === 'الكل' ? services : services.filter(service => service.category === activeFilter);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,8 +53,12 @@ function Services() {
     };
   }, []);
 
+  const toggleFilter = (filter) => {
+    setActiveFilter(filter);
+  };
+
   return (
-    <div className="Services" id="Services" ref={servicesRef} >
+    <div className="Services" id="Services" ref={servicesRef}>
       <div className='title-wrapper'>
         <h2 className='Services-Title fade-in-element hidden'>خدماتنا</h2>
       </div>
@@ -42,176 +66,34 @@ function Services() {
         الخدمات التي نقدمها مصممة خصيصًا لتلبية احتياجاتك
       </p>
 
+      {/* Filter Buttons */}
+      <div className="filter-buttons">
+        <button className={activeFilter === 'الكل' ? 'active' : ''} onClick={() => toggleFilter('الكل')}>الكل</button>
+        <button className={activeFilter === 'تطوير البرمجيات' ? 'active' : ''} onClick={() => toggleFilter('تطوير البرمجيات')}>تطوير البرمجيات</button>
+        <button className={activeFilter === 'حلول تقنية المعلومات' ? 'active' : ''} onClick={() => toggleFilter('حلول تقنية المعلومات')}>حلول تقنية المعلومات</button>
+        <button className={activeFilter === 'التسويق' ? 'active' : ''} onClick={() => toggleFilter('التسويق')}>التسويق</button>
+      </div>
+
       <div className="Services-Grid fade-in-element hidden">
-        
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us" >
+        {filteredServices.map(service => (
+          <a href='/contact-us'>
+            <div key={service.id} className="Service-Box">
             <div className="Service-Upper" lang="en">
-              <i className="fas fa-robot Service-Icon"></i>
+              <i className={`${service.icon} Service-Icon`}></i>
             </div>
             <div className="Service-Lower">
-              <h3>حلول الذكاء الاصطناعي</h3>
-              <p>نقدم تطبيقات مخصصة تستفيد من تقنيات الذكاء الاصطناعي مثل التعلم العميق وتحليل البيانات وتصميم وتطوير روبوتات ذكية للقطاعات المختلفة</p>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
             </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us" >
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-laptop-code Service-Icon"></i>
-            </div>
-            <div className="Service-Lower">
-              <h3>تطوير المواقع الإلكترونية</h3>
-              <p>نقدم تصميمًا مبتكرًا وتطويرًا للمواقع الإلكترونية وتطوير تطبيقات الهاتف المحمول</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us" >
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-mobile-alt Service-Icon"></i>
-            </div>
-            <div className="Service-Lower">
-              <h3>تطوير تطبيقات الجوال</h3>
-              <p>نقدم تصميمًا مبتكرًا لتطوير تطبيقات الهاتف المحمول</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a  href="/contact-us" >
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-bullhorn Service-Icon"></i>
-            </div>
-            <div className="Service-Lower">
-              <h3> التسويق </h3>
-              <p>ترويج لمنتجاتك أو خدماتك عبر وسائل التواصل الاجتماعي, الإعلانات عبر الإنترنت والتسويق عبر البريد الإلكتروني</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a  href="/contact-us" >
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-lightbulb Service-Icon"></i>
-            </div>
-            <div className="Service-Lower">
-              <h3>منتجات تقنية مبتكرة</h3>
-              <p>نقدم أجهزة ذكية تتوافق مع برمجيات الذكاء الاصطناعي لخدمة العمل والمهام اليومية.</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us" >
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-handshake Service-Icon"></i>
-            </div>
-            <div className="Service-Lower">
-              <h3>الاستشارات</h3>
-              <p>نساعد الشركات والأفراد على تحقيق أهدافهم التقنية ببرمجيات وأدوات حديثة</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-        <a href="/contact-us" ><div className="Service-Upper"lang="en">
-            <i className="fas fa-cogs Service-Icon"></i> {/* ERP Icon */}
           </div>
-          <div className="Service-Lower">
-            <h3> (ERP) تخطيط موارد المؤسسات </h3>
-            <p> تساعد هذه البرمجيات الشركات على تحسين عمليات البيع وتقديم تجربة سلسة للعملاء. تتضمن ميزات مثل تتبع المبيعات، إدارة المخزون، وتحليلات البيانات لاتخاذ قرارات أكثر ذكاءً. </p>
-          </div></a>
+        </a>
           
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-        <a href="/contact-us" >
-          <div className="Service-Upper"lang="en">
-            <i className="fas fa-warehouse Service-Icon"></i> {/* Inventory Management Icon */}
-          </div>
-          <div className="Service-Lower">
-            <h3> برمجيات إدارة المخزون </h3>
-            <p> تساعد هذه البرمجيات الشركات على تنظيم المخازن بكفاءة، من خلال تسهيل عمليات الاستلام، التسليم، التخزين، والجرد، مما يساهم في تحسين دقة البيانات واتخاذ قرارات أفضل </p>
-          </div></a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us" >
-            <div className="Service-Upper"lang="en">
-              <i className="fas fa-cash-register Service-Icon"></i> {/* Sales and POS Icon */}
-            </div>
-            <div className="Service-Lower">
-              <h3> برمجيات إدارة المبيعات و نقاط البيع </h3>
-              <p> تساعد هذه البرمجيات الشركات على تحسين عمليات البيع وتقديم تجربة سلسة للعملاء. تتضمن ميزات مثل تتبع المبيعات، إدارة المخزون، وتحليلات البيانات لاتخاذ قرارات أكثر ذكاءً. </p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us">
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-cloud Service-Icon"></i> {/* Cloud Computing Icon */}
-            </div>
-            <div className="Service-Lower">
-              <h3>خدمات الحوسبة السحابية</h3>
-              <p>نقدم حلول الحوسبة السحابية لتعزيز البنية التحتية لتكنولوجيا المعلومات وزيادة الكفاءة التشغيلية.</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us">
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-shield-alt Service-Icon"></i> {/* Security Systems Icon */}
-            </div>
-            <div className="Service-Lower">
-              <h3>الأنظمة الأمنية</h3>
-              <p>نوفر أنظمة أمنية متقدمة لحماية المؤسسات والمنازل من التهديدات والمخاطر.</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us">
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-network-wired Service-Icon"></i> {/* Infrastructure and Networking Icon */}
-            </div>
-            <div className="Service-Lower">
-              <h3>البنية التحتية والشبكات</h3>
-              <p>نقدم خدمات تخطيط وتنفيذ البنية التحتية للشبكات لضمان تشغيل سلس واتصال دائم.</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us">
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-chart-bar Service-Icon"></i> {/* Data Analysis Icon */}
-            </div>
-            <div className="Service-Lower">
-              <h3>تحليل البيانات</h3>
-              <p>نقدم خدمات تحليل البيانات لمساعدة الشركات على اتخاذ قرارات مبنية على البيانات وتحقيق نتائج أفضل.</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us">
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-bullhorn Service-Icon"></i> {/* Digital Marketing Icon */}
-            </div>
-            <div className="Service-Lower">
-              <h3>التسويق الإلكتروني</h3>
-              <p>ترويج لمنتجاتك أو خدماتك عبر وسائل التواصل الاجتماعي, الإعلانات عبر الإنترنت والتسويق عبر البريد الإلكتروني.</p>
-            </div>
-          </a>
-        </div>
-        <div className="Service-Box fade-in-element hidden">
-          <a href="/contact-us">
-            <div className="Service-Upper" lang="en">
-              <i className="fas fa-ad Service-Icon"></i> {/* Advertising Icon */}
-            </div>
-            <div className="Service-Lower">
-              <h3>دعاية و إعلان</h3>
-              <p>نقدم خدمات الدعاية والإعلان لزيادة الوعي بمنتجاتك أو خدماتك وتحقيق انتشار أوسع.</p>
-            </div>
-          </a>
-        </div>
+        ))}
       </div>
 
       <div className="Button-Container fade-in-element hidden">
-        <a className='link' href="/services" >
-            <button className="Learn-More-Button">تعرف على خدماتنا</button>
+        <a className='link' href="/services">
+          <button className="Learn-More-Button">تعرف على خدماتنا</button>
         </a>
       </div>
     </div>

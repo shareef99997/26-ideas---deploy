@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Offers.css';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
-
 function Offers_en() {
   const servicesRef = useRef(null);
+  const [swiperAutoplay, setSwiperAutoplay] = useState(true); // State to manage autoplay
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,6 +37,14 @@ function Offers_en() {
     };
   }, []);
 
+  const handleMouseEnter = () => {
+    setSwiperAutoplay(false); // Pause autoplay on hover
+  };
+
+  const handleMouseLeave = () => {
+    setSwiperAutoplay(true); // Resume autoplay on mouse leave
+  };
+
   return (
     <div className="Offers" id="Offers" ref={servicesRef}>
       {/* Title Section */}
@@ -47,7 +55,11 @@ function Offers_en() {
       {/* Title Section */}
 
       {/* Slider Section */}
-      <section className="Offers-Slider-section fade-in-element hidden">
+      <section
+        className="Offers-Slider-section fade-in-element hidden"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="img-wrapper">
           <a href="/en/contact-us">
             <Swiper
@@ -55,24 +67,40 @@ function Offers_en() {
               slidesPerView={1}
               navigation
               loop={true}
-              autoplay={{
-                delay: 6500, // 2.5 seconds delay between slides
+              autoplay={swiperAutoplay ? {
+                delay: 6500, // 6.5 seconds delay between slides
                 disableOnInteraction: false,
-              }}
+              } : false}
               modules={[Autoplay, Navigation, Pagination, Scrollbar]} // Include required modules
             >
-                <SwiperSlide>
-                  <img className='Offers-pic' src={require('../../../Assets/Images/banner-1.jpg')} alt="AI Illustration 1" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img className='Offers-pic' src={require('../../../Assets/Images/banner-2.jpg')}alt="AI Illustration 2" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img className='Offers-pic' src={require('../../../Assets/Images/banner-3.jpg')} alt="AI Illustration 3" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img className='Offers-pic' src={require('../../../Assets/Images/banner-4.jpg')} alt="AI Illustration 3" />
-                </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className='Offers-pic'
+                  src={require('../../../Assets/Images/banner-1.jpg')}
+                  alt="AI Illustration 1"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className='Offers-pic'
+                  src={require('../../../Assets/Images/banner-2.jpg')}
+                  alt="AI Illustration 2"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className='Offers-pic'
+                  src={require('../../../Assets/Images/banner-3.jpg')}
+                  alt="AI Illustration 3"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className='Offers-pic'
+                  src={require('../../../Assets/Images/banner-4.jpg')}
+                  alt="AI Illustration 4"
+                />
+              </SwiperSlide>
             </Swiper>
           </a>
         </div>

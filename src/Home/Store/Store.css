@@ -5,6 +5,7 @@
 }
 
 .Store-Title {
+  font-size: 1.5em;
   margin-bottom: 10px;
   position: relative;
   display: flex;
@@ -134,6 +135,9 @@
 }
 
 @media (max-width: 768px) {
+  .Store-Title{
+    font-size: 1.2em;
+  }
   .Store-Title::after {
     width: 100px;
   }

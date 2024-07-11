@@ -226,7 +226,14 @@
   }
 
   .service-img-en{
-
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    transform: translateX(50%);
+    transform: translateY(-100%); 
+    z-index: 2;
+    opacity: 0; 
+    max-width: 50%;
   }
 
   .service-img-en.slide-in {

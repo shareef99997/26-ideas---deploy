@@ -7,7 +7,7 @@
 }
 
 .Market-Title {
-  font-size: 2.2em;
+  font-size: 1.5em;
   margin-bottom: 10px;
   position: relative;
   display: flex;
@@ -194,6 +194,9 @@
 }
 
 @media (max-width: 508px) {
+  .Market-Title{
+    font-size: 1.2em;
+  }
   .Markets-Grid {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 50px;
